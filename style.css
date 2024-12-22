@@ -530,11 +530,9 @@ section .donasi {
 	.simply-countdown > .simply-section {
 		padding: 60px;
 		margin: 5px;
+		margin-left: 1rem;
 	}
-	margin-left: 1rem;
-}
-
-.home .heart {
+	.home .heart {
 	display: none;
 }
 
