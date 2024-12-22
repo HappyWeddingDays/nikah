@@ -441,7 +441,7 @@ section .donasi {
     padding: 20px;
     margin: 10px;
     width: 400px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
     position: relative;
 }
 
