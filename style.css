@@ -324,6 +324,135 @@ body {
     left: -14px;
     right: auto;
 }
+/* quotes style */
+.quote {
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.quote span{
+    text-transform: uppercase;
+    color: #666;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.quote p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.quote h3 {
+    text-align: center;
+    transform: translateY(70%);
+}
+
+
+.timeline-quote {
+    list-style: none;
+    padding: 1.4rem;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.timeline-quote::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 2px;
+    background-color: #ccc;
+    left: 50%;
+}
+
+.timeline-quote li {
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.timeline-quote li::before,
+.timeline-quote li::after {
+    content: '';
+    display: table;
+}
+
+
+.timeline-quote li::after {
+    clear: both;
+}
+
+.timeline-quote li .timeline-image {
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.timeline-quote li .timeline-quote-panel {
+    width: 40%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: -40px;
+}
+
+
+.timeline-quote li .timeline-quote-panel::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    top: 80px;
+    right: -15px;
+}
+
+.timeline-quote li .timeline-quote-panel::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    top: 81px;
+    right: -13px;
+}
+
+.timeline-quote li.timeline-quote-inverted .timeline-panel {
+    float: right;
+    margin-right: -40px;
+}
+
+.timeline-quote li.timeline-quote-inverted .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+.timeline-quote li.timeline-quote-inverted .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
 
 .gallery {
     background-color: #fff;
