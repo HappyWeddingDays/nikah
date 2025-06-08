@@ -2,7 +2,7 @@ AOS.init();
 
 
 //snow 
-  const snowContainer = document.getElementById("snow-block");
+  const snowContainer = document.querySelector("snow-block");
 
   function createSnowflake() {
     const snowflake = document.createElement("div");
