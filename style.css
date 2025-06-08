@@ -93,7 +93,7 @@ body {
 }
 
 .home {
-    background-image: url(img/pattern2.jpg) !important;
+    background-image: url(img/pattern1.jpg) !important;
     background-size: cover;
     min-height: 100vh;
     margin-top: -8rem;
