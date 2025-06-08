@@ -60,7 +60,6 @@ body {
 .hero a {
     color: var(--pink);
     background-color: white;
-    box-shadow: var(--shadow);
 }
 
 .hero a:hover {
