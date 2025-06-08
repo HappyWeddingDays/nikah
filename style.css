@@ -7,7 +7,7 @@
 body {
     min-height: 2000px;
     font-size: 1.4rem;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Caveat", cursive;
 }
 
 .hero::before {
@@ -39,7 +39,7 @@ body {
 }
 
 .hero h1 {
-    font-family: "Ysabeau SC", serif;
+    font-family: "Caveat", cursive;
     font-size: 4rem;
 }
 
