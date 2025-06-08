@@ -106,6 +106,7 @@ body {
 .home h2,
 .info h2,
 .story h2,
+.quote,
 .gallery h3,
 .kehadiran h2,
 .sawer h2 {
@@ -214,14 +215,13 @@ body {
 
 .story span,
 .gallery span,
-.kehadiran p,
-.quote{
+.kehadiran p {
     text-transform: uppercase;
     color: #666;
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 1rem;
-    display: blcok;
+    display: block;
 }
 
 .story p {
