@@ -358,6 +358,8 @@ body {
     color: white;
     border: 1px solid white;
 }
+.disp {
+    overflow: hidden;
 
 footer {
     margin-top: 10px;
