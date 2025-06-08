@@ -14,7 +14,7 @@ const isiCerita = [
 ];
 
 // Pilih semua elemen <p> di dalam .timeline-heading
-const timeLineHeadingLists = document.querySelectorAll('.timeline-heading p');
+const timeLineHeadingLists = document.querySelectorAll('.timeline-quote-heading p');
 
 // Loop pertama untuk animasi GSAP
 for (let i = 0; i < timeLineHeadingLists.length; i++) {
