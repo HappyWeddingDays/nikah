@@ -39,7 +39,7 @@ body {
 }
 
 .hero h1 {
-    font-family: "Ysabeau SC", serif;
+    font-family: "Caveat", cursive;
     font-size: 4rem;
 }
 
@@ -110,7 +110,7 @@ body {
 .kehadiran h2,
 .sawer h2 {
     color: var(--pink);
-    font-family: "Ysabeau SC", serif;
+    font-family: "Caveat", cursive;
     font-size: 5rem;
     font-weight: bold;
 }
