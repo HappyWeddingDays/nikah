@@ -80,7 +80,7 @@ body {
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-    font-family: "Ysabeau SC", serif;
+    font-family: "Caveat", cursive;
     font-size: 2.8rem;
     font-weight: bold;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .home .couple h3 {
-    font-family: 'Sacramento';
+    font-family: "Caveat", cursive;
     font-size: 2.9rem;
     color: var(--pink);
 }
@@ -166,7 +166,7 @@ body {
 
 .info h2 {
     color: var(--pink);
-    font-family: 'Sacramento';
+    font-family: "Caveat", cursive;
     font-size: 5rem;
     font-weight: bold;
     text-align: center;
