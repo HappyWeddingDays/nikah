@@ -117,14 +117,14 @@ body {
 }
 
 .home h3 {
-    color: #452c63;
+    color: pink;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .home p {
     font-size: 1.1rem;
-    color: #666;
+    color: white;
 }
 
 .home .couple {
