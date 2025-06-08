@@ -7,7 +7,7 @@ gsap.to('.hero p', {
 });
 
 const isiCerita = [
-    "Kami Bertemu pada tahun 2018, tepatnya saat kami menempuh pendidikan di Kampus yg sama. Siapa sangka pertemuan itu membawa kami pada suatu ikatan cinta yg suci.",
+    "Jodoh adalah cerminan diri. Alangkah beruntungnya mereka yg saling melengkapi dan mencintai karena Allah.",
     "Tidak ada yg kebetulan di dunia ini, semua sudah tersusun rapih oleh sang Maha Kuasa. Alhamdulillah yg telah mempertemukan kami dgn orang yg kami saling mencintainya hingga menempuh jalan yg diridhoinya.",
     "Katanya Cinta dapat tumbuh dgn kebersamaan. Seiring berjalannya waktu, kami semakin dekat. Lalu kami berkomitmen pada tahun 2023 seakan terus berkonspirasi utk menyatukan kami berdua.",
     "Menuntut kami pada sebuah pertemuan yg tak pernah disangka. Hingga akhirnya membawa kami pada sebua ikatan suci yg diridhoi-Nya. Kami melangsungkan acara lamaran pada 27 Oktober 2024."
