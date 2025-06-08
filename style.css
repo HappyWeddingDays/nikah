@@ -99,6 +99,7 @@ body {
     margin-top: -8rem;
     padding-top: 15rem;
     padding-bottom: 5rem;
+    filter: grayscale();
 }
 
 
