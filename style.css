@@ -504,6 +504,30 @@ section .donasi {
     font-size: 0.9em;
 }
 
+.snow-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 /* media querry responsive*/
 ] @media (max-width: 1900px) {
     .home .heart {
@@ -540,30 +564,6 @@ section .donasi {
         transform: translateY(200%);
     }
 
-}
-
-#snow-block {
-  position: relative;
-  overflow: hidden;
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px;
-  color: white;
-  font-size: 1em;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(300px) rotate(360deg);
-    opacity: 0;
-  }
 }
 
 /*tablet*/
@@ -625,5 +625,7 @@ section .donasi {
         float: right;
         margin-right: 1.4%;
     }
+    .home .heart {
+        display: none;
 
 }
