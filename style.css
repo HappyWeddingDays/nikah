@@ -217,7 +217,7 @@ body {
 .gallery span,
 .kehadiran p {
     text-transform: uppercase;
-    color: #666;
+    color: white;
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 1rem;
@@ -335,7 +335,7 @@ body {
 
 .quote span{
     text-transform: uppercase;
-    color: #666;
+    color: white;
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 1rem;
@@ -590,48 +590,10 @@ section .donasi {
     position: relative;
 }
 
-.chips {
-    width: 50px;
-    height: 40px;
-    background-color: #d4af37;
-    border-radius: 5px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.logos {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.logos img {
-    width: 50px;
-}
-
 .details {
     margin-top: 80px;
 }
 
-.details .bank {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.details .account-number {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
-
-.details .name {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.details .valid-thru {
-    font-size: 0.9em;
-}
 
 /* media querry responsive*/
 ] @media (max-width: 1900px) {
