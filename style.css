@@ -59,7 +59,7 @@ body {
 
 .hero a {
     color: var(--pink);
-    background-color: white;
+    background-color: #1d1160;
     box-shadow: var(--shadow);
 }
 
