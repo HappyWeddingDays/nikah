@@ -28,7 +28,8 @@ body {
 .hero {
     position: relative;
     min-height: 100vh;
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* bayangan ke bawah */
+    border-radius: 10px; /* opsional, untuk sudut bulat */
 }
 
 .hero h1,
