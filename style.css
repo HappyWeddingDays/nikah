@@ -529,6 +529,9 @@ section .donasi {
     .story h3 {
         transform: translateY(200%);
     }
+    .home .heart {
+        display: none;
+    }
 
 }
 
@@ -546,10 +549,6 @@ section .donasi {
         padding: 60px;
         margin: 5px;
         margin-left: 1rem;
-    }
-
-    .home .heart {
-        display: none;
     }
 
     .timeline li .timeline-panel {
@@ -591,7 +590,4 @@ section .donasi {
         float: right;
         margin-right: 1.4%;
     }
-    .home .heart {
-        display: none;
-
 }
