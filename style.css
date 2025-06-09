@@ -59,7 +59,7 @@ body {
 
 .hero a {
     color: var(--pink);
-    background-color: #F9629F;
+    background-color: #F9629A;
 }
 
 .hero a:hover {
@@ -238,6 +238,7 @@ body {
 .story h3 {
     text-align: center;
     transform: translateY(70%);
+    color: #F9629F;
 }
 
 
