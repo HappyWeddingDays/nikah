@@ -214,6 +214,10 @@ body {
     font-weight: 300;
 }
 
+.info p {
+    font-size: 1.7rem;
+}
+
 .story {
     max-width: 100%;
     overflow: hidden;
