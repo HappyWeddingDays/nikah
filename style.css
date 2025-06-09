@@ -64,7 +64,7 @@ body {
 
 .hero a:hover {
     background-color: var(--pink);
-    color: #F9629E;
+    color: #F9622A;
 }
 
 .mynavbar {
@@ -102,6 +102,10 @@ body {
     margin-top: -8rem;
     padding-top: 15rem;
     padding-bottom: 5rem;
+}
+
+.info {
+    color: pink;
 }
 
 
@@ -162,7 +166,7 @@ body {
 
 .info {
     background-color: var(--bg);
-    color: #F9629F;
+    color: #E5E4E2;
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
