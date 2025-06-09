@@ -70,7 +70,8 @@ body {
 .mynavbar {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
-.mynavbar span, h5 {
+.mynavbar span,
+.mynavbar h5 {
     color: red;
 }
 
