@@ -104,11 +104,6 @@ body {
     padding-bottom: 5rem;
 }
 
-.info {
-    color: pink;
-}
-
-
 .home h2,
 .info h2,
 .story h2,
@@ -165,8 +160,8 @@ body {
 }
 
 .info {
-    background-color: var(--bg);
-    color: #E5E4E2;
+    background-color: #D3D3D3;
+    color: #F9629F;
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
