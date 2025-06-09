@@ -392,6 +392,13 @@ body {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
+.timeline-quote::after {
+    content: '';
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+
 .timeline-quote li {
     margin-bottom: 10rem;
     position: relative;
@@ -429,7 +436,7 @@ body {
     padding: 1rem;
     position: relative;
     border-radius: 10px;
-    background-color: red;
+    background-color: white;
     margin-left: -40px;
 }
 
