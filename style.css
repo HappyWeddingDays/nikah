@@ -34,7 +34,10 @@ body {
 .hero h1,
 .hero h3,
 .hero h4,
-.hero p {
+.hero p,
+.mynavbar,
+.home,
+.info {
     text-shadow: var(--shadow);
 }
 
