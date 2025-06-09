@@ -601,6 +601,10 @@ section .donasi {
     margin-top: 10px;
 }
 
+.kehadiran {
+    background-color: #d3d3d3;
+}
+
 /*Hujan salju*/
 .snow-block {
     position: relative;
