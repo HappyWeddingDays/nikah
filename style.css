@@ -37,7 +37,10 @@ body {
 .hero p,
 .mynavbar,
 .home,
-.info {
+.info,
+.story,
+.quote,
+.invited {
     text-shadow: var(--shadow);
 }
 
