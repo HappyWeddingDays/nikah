@@ -6,8 +6,9 @@
 
 body {
     min-height: 2000px;
-    font-size: 1.4rem;
-    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 400;
 }
 
 .hero::before {
