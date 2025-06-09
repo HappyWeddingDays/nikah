@@ -59,7 +59,7 @@ body {
 
 .hero a {
     color: var(--pink);
-    background-color: #F9629A;
+    background-color: rgba(155, 42, 146, 100);
 }
 
 .hero a:hover {
