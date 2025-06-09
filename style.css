@@ -1,7 +1,7 @@
 :root {
     --pink: #FF00AE;
     --bg: #FF0000;
-    --shadow: 0 4px 3px rgb(0 0 0 / 0.9);
+    --shadow: 2px 4px 3px rgb(0 0 0 / 0.7);
 }
 
 body {
