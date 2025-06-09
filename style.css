@@ -160,7 +160,7 @@ body {
 }
 
 .info {
-    background-color: #D3D3D3;
+    background-color: rgba(211, 211, 211, 0.5);
     color: #F9629F;
     padding-top: 10rem;
     padding-bottom: 8rem;
