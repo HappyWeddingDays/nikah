@@ -28,7 +28,7 @@ body {
 .hero {
     position: relative;
     min-height: 100vh;
-    border: 0 0 8px solid black;
+    border: 0 100px 8px solid black;
     }
 
 .hero h1,
