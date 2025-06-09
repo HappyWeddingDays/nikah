@@ -39,7 +39,7 @@ body {
 .home,
 .info,
 .story,
-.quote,
+.quote h2,
 .invited {
     text-shadow: var(--shadow);
 }
