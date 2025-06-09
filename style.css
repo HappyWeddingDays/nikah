@@ -40,7 +40,8 @@ body {
 .info,
 .story,
 .quote h2,
-.invited {
+.kehadiran h2,
+.invited h2 {
     text-shadow: var(--shadow);
 }
 
