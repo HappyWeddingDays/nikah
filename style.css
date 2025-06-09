@@ -64,7 +64,7 @@ body {
 
 .hero a:hover {
     background-color: var(--pink);
-    color: white;
+    color: #F9629E;
 }
 
 .mynavbar {
@@ -116,14 +116,14 @@ body {
 }
 
 .home h3 {
-    color: white;
+    color: #F9629F;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .home p {
     font-size: 1.5rem;
-    color: white;
+    color: #F9629F;
 }
 
 .home .couple {
@@ -159,7 +159,7 @@ body {
 
 .info {
     background-color: var(--bg);
-    color: white;
+    color: #F9629F;
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
@@ -185,7 +185,7 @@ body {
 
 .info .card {
     background-color: rgba(255, 255, 255, 0.2) !important;
-    color: white !important;
+    color: #F9629F !important;
     border: 1px solid #999;
 }
 
@@ -216,7 +216,7 @@ body {
 .gallery span,
 .kehadiran p {
     text-transform: uppercase;
-    color: white;
+    color: #F9629F;
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 1rem;
