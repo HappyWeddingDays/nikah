@@ -406,7 +406,7 @@ body {
     clear: both;
 }
 
-.timeline-quote li .timeline-image {
+.timeline-quote li .timeline-quote-image {
     width: 160px;
     height: 160px;
     background-color: white;
@@ -461,14 +461,14 @@ body {
     margin-right: -40px;
 }
 
-.timeline-quote li.timeline-quote-inverted .timeline-panel::before {
+.timeline-quote li.timeline-quote-inverted .timeline-quote-panel::before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
 }
 
-.timeline-quote li.timeline-quote-inverted .timeline-panel::after {
+.timeline-quote li.timeline-quote-inverted .timeline-quote-panel::after {
     border-left-width: 0;
     border-right-width: 14px;
     left: -14px;
