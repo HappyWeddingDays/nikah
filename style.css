@@ -468,7 +468,7 @@ body {
 }
 
 .kehadiran {
-    background-color: var(--bg);
+    background-color: rgba(211, 211, 211, 0.8);
     overflow: hidden;
 }
 
@@ -599,10 +599,6 @@ section .donasi {
 
 .details {
     margin-top: 10px;
-}
-
-.kehadiran {
-    background-color: #d3d3d3;
 }
 
 /*Hujan salju*/
