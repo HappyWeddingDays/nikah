@@ -121,7 +121,7 @@ body {
 .quote h2,
 .gallery h3,
 .kehadiran h2,
-.invited h2 {
+.sawer h2 {
     color: var(--pink);
     font-family: "Caveat", cursive;
     font-size: 5rem;
