@@ -114,10 +114,12 @@ body {
 }
 
 .snowfall::before {
+    inset: -4rem 0 0;
     background-size: 45% 100%;
 }
 
 .snowfall::after {
+    inset: -8rem 0 0;
     background-size: 32% 100%;
 }
 
