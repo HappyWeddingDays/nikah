@@ -105,6 +105,7 @@ body {
     inset: 0;
     content: '';
     overflow: hidden;
+    background-image: radial-gradient( circle at 5% 10%, #fff 3px, transparent 0);
 }
 
 .sticky-top {
