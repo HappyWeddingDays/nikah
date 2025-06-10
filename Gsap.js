@@ -15,7 +15,7 @@ function splitTextToSpans(element) {
 } 
 
 // Ambil semua elemen dengan class explode
-const targets = document.querySelectorAll('.typing-explode');
+const targets = document.querySelectorAll('.explode');
 
 targets.forEach(el => {
   splitTextToSpans(el); // Pisahkan huruf ke span
