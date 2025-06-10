@@ -8,9 +8,8 @@ gsap.to('.hero p', {
 
 const isiCerita = [
     "Jodoh adalah cerminan diri. Alangkah beruntungnya mereka yg saling melengkapi dan mencintai karena Allah.",
-    "Tidak ada yg kebetulan di dunia ini, semua sudah tersusun rapih oleh sang Maha Kuasa. Alhamdulillah yg telah mempertemukan kami dgn orang yg kami saling mencintainya hingga menempuh jalan yg diridhoinya.",
-    "Katanya Cinta dapat tumbuh dgn kebersamaan. Seiring berjalannya waktu, kami semakin dekat. Lalu kami berkomitmen pada tahun 2023 seakan terus berkonspirasi utk menyatukan kami berdua.",
-    "Menuntut kami pada sebuah pertemuan yg tak pernah disangka. Hingga akhirnya membawa kami pada sebua ikatan suci yg diridhoi-Nya. Kami melangsungkan acara lamaran pada 27 Oktober 2024."
+    "Seorang suami dan istri adalah pakaian bagi masing-masing. Oleh karena itu mereka harus saling menutupi kekurangan masing-masing dan tidak boleh menampakkan kekurangan di antara mereka pada orang lain, siapapun itu.",
+    "Seorang istri dan anak adalah prioritas utama bagi suami dalam hal kasih sayang dan nafkah. Namun dalam hal berbakti, seorang suami tetap memprioritaskan kedua orang tuanya."
 ];
 
 // Pilih semua elemen <p> di dalam .timeline-heading
