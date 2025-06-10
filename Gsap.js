@@ -40,60 +40,41 @@ for (let i = 0; i < timeLineHeadingLists.length; i++) {
             }, interval);
         }
     });
+    // Efek LEDAKAN (huruf beterbangan)
+ScrollTrigger.create({
+    trigger: el,
+    start: "top 90%",
+    once: true,
+    onEnter: () => {
+        const chars = el.textContent.split('');
+        el.innerHTML = ''; // Kosongkan teks
 
-    // Efek Buyar Acak
-    function shuffleText(text) {
-        let chars = text.split('');
-        for (let i = chars.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [chars[i], chars[j]] = [chars[j], chars[i]];
-        }
-        return chars.join('');
+        chars.forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.display = 'inline-block';
+            el.appendChild(span);
+        });
+
+        const spans = el.querySelectorAll('span');
+
+        spans.forEach((span, i) => {
+            const angle = Math.random() * 2 * Math.PI;
+            const distance = Math.random() * 100 + 50;
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance;
+            const delay = i * 0.01;
+
+            gsap.to(span, {
+                duration: 1.5,
+                delay: delay,
+                x: x,
+                y: y,
+                opacity: 0,
+                rotation: Math.random() * 360,
+                ease: "power3.out"
+            });
+        });
     }
-
-    ScrollTrigger.create({
-        trigger: el,
-        start: "top 85%",
-        end: "top 50%",
-        onEnter: () => {
-            el.textContent = shuffleText(originalText);
-            gsap.to(el, {
-                duration: 0.3,
-                opacity: 0.4,
-                filter: "blur(2px)",
-                rotate: 5,
-                x: 20,
-            });
-        },
-        onLeave: () => {
-            el.textContent = originalText;
-            gsap.to(el, {
-                duration: 0.3,
-                opacity: 1,
-                filter: "blur(0)",
-                rotate: 0,
-                x: 0,
-            });
-        },
-        onEnterBack: () => {
-            el.textContent = originalText;
-            gsap.to(el, {
-                duration: 0.3,
-                opacity: 1,
-                filter: "blur(0)",
-                rotate: 0,
-                x: 0,
-            });
-        },
-        onLeaveBack: () => {
-            el.textContent = shuffleText(originalText);
-            gsap.to(el, {
-                duration: 0.3,
-                opacity: 0.4,
-                filter: "blur(2px)",
-                rotate: -5,
-                x: -20,
-            });
-        }
-    });
-      }
+});
+}
