@@ -75,8 +75,8 @@ targets.forEach(el => {
   // Efek ketikan saat scroll
   ScrollTrigger.create({
     trigger: element,
-    start: "top 50%",
-    once: true,
+    start: "bottom 50%",
+    once: false,
     onEnter: () => {
       let index = 0;
       const typing = setInterval(() => {
