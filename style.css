@@ -1,5 +1,5 @@
 :root {
-    --pink: #F4DCD6;
+    --pink: #FF49FE;
     --bg: #FF0000;
     --shadow: 2px 4px 3px rgb(0 0 0 / 0.7);
 }
@@ -72,7 +72,7 @@ body {
 
 .hero a:hover {
     background-color: var(--pink);
-    color: #F9622A;
+    color: #DFC7C1;
 }
 
 .mynavbar {
@@ -80,7 +80,7 @@ body {
 }
 .mynavbar span,
 .mynavbar h5 {
-    color: red;
+    color: #FF49FE;
 }
 
 .mynavbar .nav-link {
@@ -127,14 +127,14 @@ body {
 }
 
 .home h3 {
-    color: #F9629F;
+    color: #DFC7C1;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .home p {
     font-size: 1.8rem;
-    color: #F9629F;
+    color: #FF49FE;
 }
 
 .home .couple {
@@ -170,7 +170,7 @@ body {
 
 .info {
     background-color: #F8E9E1;
-    color: #F9629F;
+    color: #FF49FE;
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
@@ -196,7 +196,7 @@ body {
 
 .info .card {
     background-color: rgba(255, 255, 255, 0.2) !important;
-    color: #F9629F !important;
+    color: #FF49FE !important;
     border: 1px solid #999;
 }
 
@@ -231,7 +231,7 @@ body {
 .gallery span,
 .kehadiran p {
     text-transform: uppercase;
-    color: #F9629F;
+    color: #FF49FE;
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -247,7 +247,7 @@ body {
 .story h3 {
     text-align: center;
     transform: translateY(70%);
-    color: #F9629F;
+    color: #FF49FE;
     font-size: 1.8rem;
 }
 
