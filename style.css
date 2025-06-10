@@ -617,6 +617,10 @@ section .donasi {
     margin: 0 auto;
 }
 
+.cards .name {
+    color: #FF49FE;
+}
+
 .cards {
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), #FFFFDF, #F4DCD6);
     color: white;
