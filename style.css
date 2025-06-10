@@ -99,6 +99,14 @@ body {
     text-transform: uppercase;
 }
 
+/* Snowfall hujan salju */
+.snowfall {
+    position: absolute;
+    inset: 0;
+    content: '';
+    overflow: hidden;
+}
+
 .sticky-top {
     display: hidden;
 }
@@ -374,12 +382,12 @@ body {
     transform: translateY(70%);
 }
 
-.typing-explode span {
+/* .typing-explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
-}
+}*/
 
-.typing-explode span p{
+.typing-explode span {
     color: black;
     font-family: "Merienda", cursive;
     font-weight: 300;
