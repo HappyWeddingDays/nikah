@@ -399,16 +399,17 @@ body {
 }
 
 .explode span {
-    color: #FF49FE;
-    font-family: "Caveat", cursive;
+    color: #000;
+    font-family: "Merienda", cursive;
+    font-size: 1.1rem;
+    display: inline-block;
+    white-space: pre;         /* Hindari kolaps spasi */
+    word-break: keep-all;     /* Hindari pecah kata */
 }
 
-.explode span p {
-    color: black;
-    font-family: "Merienda", cursive;
-    font-weight: 300;
-    font-size: 1.1rem;
-    white-space: normal;
+.explode span {
+    color: #FF49FE;
+    font-family: "Caveat", cursive;
 }
 
 .timeline-quote {
