@@ -67,7 +67,7 @@ gsap.registerPlugin(ScrollTrigger);
 const element = document.getElementsByTagName('p');
 //const text = "Ini adalah efek ketikan seperti keyboard dan meledak.";
 const duration = 4000;
-const interval = duration / text.length;
+const interval = duration / p.length;
 
 // 1. Efek Ketik
 ScrollTrigger.create({
