@@ -1,4 +1,4 @@
-/* gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 // Fungsi pecah teks menjadi span huruf-huruf
 function splitTextToSpans(element) {
@@ -61,7 +61,7 @@ targets.forEach(el => {
   });
 }); 
 
-*/ 
+/*
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -148,3 +148,4 @@ targets.forEach(el => {
       }
     });
   }
+*/
