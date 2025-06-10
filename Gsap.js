@@ -29,7 +29,7 @@ targets.forEach(el => {
   ScrollTrigger.create({
     trigger: wrapper,
     start: "top 80%",         // Efek dimulai saat pembungkus masuk 60% viewport
-    end: "top 40%",
+    end: "top 20%",
     markers: true,
     toggleActions: "play reverse play reverse",
     
