@@ -398,12 +398,12 @@ body {
     transform: translateY(70%);
 }
 
-.typing-explode span {
+.explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
 }
 
-.typing-explode span {
+.explode span p {
     color: black;
     font-family: "Merienda", cursive;
     font-weight: 300;
