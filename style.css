@@ -1,5 +1,5 @@
 :root {
-    --pink: green;
+    --pink: #FF49FE;
     --bg: black;
     --shadow: 2px 4px 3px rgb(0 0 0 / 0.7);
 }
@@ -357,18 +357,18 @@ body {
 
 .quote span{
     text-transform: uppercase;
-    color: #FF99EA;
+    color: green;
     font-size: 1rem;
     letter-spacing: 1px;
     margin-bottom: 1rem;
     display: block;
 }
 
-.quote p {
+.quote > p {
     font-size: 1.4rem !important;
     font-weight: 300;
     letter-spacing: 0.1rem;
-    color: black !important;
+    color: purple;
 }
 
 .quote h3 {
