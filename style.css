@@ -613,7 +613,7 @@ section .donasi {
 }
 
 .cards {
-    background: linear-gradient(145deg, #FFFFDF, #F4DCD6);
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), #FFFFDF, #F4DCD6);
     color: white;
     border-radius: 15px;
     padding: 20px;
