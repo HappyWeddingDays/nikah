@@ -19,6 +19,7 @@ body {
     width: 100%;
     height: 100%;
     background: url("img/gandengan.jpg") no-repeat center / cover;
+    z-index: -1;
 }
 
 .hero {
