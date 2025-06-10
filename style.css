@@ -134,6 +134,17 @@ body {
     overflow: hidden;
     background: blueviolet;
 }
+.line1 {
+    z-index: 15;
+    opacity: 0.5;
+}
+.line2 {
+    z-index: 10;
+    opacity: 0.7;
+}
+.line3 {
+    z-index: 5;
+}
 
 
 .home {
