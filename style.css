@@ -161,14 +161,25 @@ body {
 .wave2 {
     -webkit-background-size: 50% 80px;
     background-size: 50% 80px;
-    animation: animate 12s linear infinite;
+    animation: waveAnimate 12s linear infinite;
 }
 .wave3 {
     -webkit-background-size: 50% 100px;
     background-size: 50% 100px;
-    animation: animate 18s linear infinite;
+    animation: waveAnimate 18s linear infinite;
 }
 
+@keyframes waveAnimate {
+    0% {
+        transform: translateX(0) translateZ(0) translateY(1);
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) translateY(0.5);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) translateY(1);
+    }
+}
 
 .home {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #EBEDEF !important;
