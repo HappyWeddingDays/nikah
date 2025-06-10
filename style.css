@@ -427,6 +427,11 @@ body {
     background-repeat: no-repeat;
 }
 
+.timeline-quote-panel {
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
 
 .timeline-quote li .timeline-quote-panel {
     width: 40%;
