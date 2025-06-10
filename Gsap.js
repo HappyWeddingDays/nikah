@@ -64,8 +64,8 @@ targets.forEach(el => {
 // JavaScript
 gsap.registerPlugin(ScrollTrigger);
 
-const element = document.querySelector('.typing-explode');
-const text = "Ini adalah efek ketikan seperti keyboard dan meledak.";
+const element = document.getElementsByTagName('p');
+//const text = "Ini adalah efek ketikan seperti keyboard dan meledak.";
 const duration = 4000;
 const interval = duration / text.length;
 
@@ -78,8 +78,8 @@ ScrollTrigger.create({
     let index = 0;
     element.textContent = '';
     const typing = setInterval(() => {
-      if (index < text.length) {
-        element.textContent += text[index];
+      if (index < p.length) {
+        element.textContent += p[index];
         index++;
       } else {
         clearInterval(typing);
