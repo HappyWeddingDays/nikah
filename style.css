@@ -399,6 +399,8 @@ body {
 }
 
 .explode > span {
+    margin-top: 20px;
+    padding-top: 10px;
     display: inline-block;
     white-space: pre;         /* Hindari kolaps spasi */
     word-break: keep-all;     /* Hindari pecah kata */
