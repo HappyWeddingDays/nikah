@@ -126,6 +126,15 @@ body {
 .sticky-top {
     display: hidden;
 }
+/* Wave animasi*/
+.line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: blueviolet;
+}
+
 
 .home {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #EBEDEF !important;
