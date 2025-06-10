@@ -132,7 +132,7 @@ body {
     width: 100%;
     height: 100px;
     overflow: hidden;
-    background: green;
+    background: orange;
 }
 .line1 {
     z-index: 15;
