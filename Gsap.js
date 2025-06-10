@@ -1,80 +1,57 @@
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('.hero p', {
-    duration: 2,
-    delay: 2,
-    text: 'Akan dilaksanakan dalam: ',
-});
+// Fungsi pecah teks jadi huruf span
+function splitTextToSpans(element) {
+  const text = element.textContent;
+  element.innerHTML = '';
+  text.split('').forEach(char => {
+    const span = document.createElement('span');
+    span.textContent = char;
+    span.style.display = 'inline-block';
+    span.style.opacity = 1;
+    element.appendChild(span);
+  });
+}
 
-const isiCerita = [
-    "Jodoh adalah cerminan diri. Alangkah beruntungnya mereka yg saling melengkapi dan mencintai karena Allah.",
-    "Seorang suami dan istri adalah pakaian bagi masing-masing. Oleh karena itu mereka harus saling menutupi kekurangan masing-masing dan tidak boleh menampakkan kekurangan di antara mereka pada orang lain, siapapun itu.",
-    "Seorang istri dan anak adalah prioritas utama bagi suami dalam hal kasih sayang dan nafkah. Namun dalam hal berbakti, seorang suami tetap memprioritaskan kedua orang tuanya."
-];
+const targets = document.querySelectorAll('.explode');
 
-const timeLineHeadingLists = document.querySelectorAll('.timeline-quote-heading p');
+targets.forEach(el => {
+  splitTextToSpans(el);
+  const spans = el.querySelectorAll('span');
 
-for (let i = 0; i < timeLineHeadingLists.length; i++) {
-    const el = timeLineHeadingLists[i];
-    const text = isiCerita[i];
-    let originalText = text;
-    el.textContent = '';
+  // Simpan posisi awal
+  spans.forEach(span => {
+    gsap.set(span, { x: 0, y: 0, rotate: 0, opacity: 1 });
+  });
 
-    // Efek Ketik
-    ScrollTrigger.create({
-        trigger: el,
-        start: "top 60%",
-        once: true,
-        onEnter: () => {
-            let index = 0;
-            const duration = 4000;
-            const interval = duration / text.length;
-
-            const typing = setInterval(() => {
-                if (index < text.length) {
-                    el.textContent += text[index];
-                    index++;
-                } else {
-                    clearInterval(typing);
-                }
-            }, interval);
-        }
-    });
-    // Efek LEDAKAN (huruf beterbangan)
-ScrollTrigger.create({
+  ScrollTrigger.create({
     trigger: el,
     start: "top 90%",
-    once: true,
+    end: "top 50%",
+    toggleActions: "play reverse play reverse", // agar bisa balik saat scroll naik
     onEnter: () => {
-        const chars = el.textContent.split('');
-        el.innerHTML = ''; // Kosongkan teks
-
-        chars.forEach(char => {
-            const span = document.createElement('span');
-            span.textContent = char;
-            span.style.display = 'inline-block';
-            el.appendChild(span);
+      spans.forEach(span => {
+        gsap.to(span, {
+          x: gsap.utils.random(-200, 200),
+          y: gsap.utils.random(-150, -300),
+          rotate: gsap.utils.random(-360, 360),
+          opacity: 0,
+          duration: 1.2,
+          ease: "power4.out"
         });
-
-        const spans = el.querySelectorAll('span');
-
-        spans.forEach((span, i) => {
-            const angle = Math.random() * 2 * Math.PI;
-            const distance = Math.random() * 100 + 50;
-            const x = Math.cos(angle) * distance;
-            const y = Math.sin(angle) * distance;
-            const delay = i * 0.01;
-
-            gsap.to(span, {
-                duration: 1.5,
-                delay: delay,
-                x: x,
-                y: y,
-                opacity: 0,
-                rotation: Math.random() * 360,
-                ease: "power3.out"
-            });
+      });
+    },
+    onLeaveBack: () => {
+      spans.forEach(span => {
+        gsap.to(span, {
+          x: 0,
+          y: 0,
+          rotate: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.inOut"
         });
+      });
     }
+  });
 });
-}
