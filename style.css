@@ -407,6 +407,15 @@ body {
     word-break: keep-all;     /* Hindari pecah kata */
 }
 
+.explode {
+    color: #000;
+    font-family: "Merienda", cursive;
+    font-size: 1.1rem;
+    display: inline-block;
+    white-space: pre;         /* Hindari kolaps spasi */
+    word-break: keep-all;     /* Hindari pecah kata */
+}
+
 /*.explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
