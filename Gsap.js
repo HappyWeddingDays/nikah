@@ -15,28 +15,7 @@ const isiCerita = [
 // Pilih semua elemen <p> di dalam .timeline-heading
 const timeLineHeadingLists = document.querySelectorAll('.timeline-quote-heading p');
 
-// Loop pertama untuk animasi GSAP
-//for (let i = 0; i < timeLineHeadingLists.length; i++) {
-//    gsap.to(timeLineHeadingLists[i], {
-//        duration: 4,
-//        delay: 3,
-/*        text: isiCerita[i],
-        scrollTrigger: {
-            start: "20% bottom",
-            end: "60% top",
-            trigger: timeLineHeadingLists[i],
-            scrub: true,
-        },
-    });
-}
 
-// Loop kedua untuk mengisi teks di elemen <p>
-for (let i = 0; i < timeLineHeadingLists.length; i++) {
-    const paragraph = timeLineHeadingLists[i];
-    if (paragraph) {
-        paragraph.textContent = isiCerita[i] || `teks ${i + 1}`; // Menggunakan textContent untuk menghilangkan <br>
-    }
-} */
 
 // Bersihkan isi teks di awal agar ketikannya tampak nyata
 timeLineHeadingLists.forEach(p => p.textContent = '');
@@ -66,4 +45,23 @@ for (let i = 0; i < timeLineHeadingLists.length; i++) {
         }
     });
 }
+
+// Efek Buyar saat scroll
+ScrollTrigger.create({
+  trigger: el,
+  start: "top 85%",
+  end: "top 50%",
+  onEnter: () => {
+    gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
+  },
+  onLeave: () => {
+    gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
+  },
+  onEnterBack: () => {
+    gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
+  },
+  onLeaveBack: () => {
+    gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
+  }
+});
 
