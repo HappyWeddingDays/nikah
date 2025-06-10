@@ -432,6 +432,10 @@ body {
     display: inline-block;
 }
 
+.timeline-quote-panel .explode {
+    white-space: pre-wrap;
+}
+
 
 .timeline-quote li .timeline-quote-panel {
     width: 40%;
