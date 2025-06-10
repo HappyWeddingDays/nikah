@@ -407,10 +407,10 @@ body {
     word-break: keep-all;     /* Hindari pecah kata */
 }
 
-.explode span {
+/*.explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
-}
+}*/
 
 .timeline-quote {
     max-width: 100%;
