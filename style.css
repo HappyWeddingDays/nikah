@@ -376,7 +376,8 @@ body {
 }
 .typing-explode span {
     color: white;
-    text-shadow: var(--shadow);
+    font-family: "Merienda", cursive;
+    font-weight: 300;
 }
 
 .timeline-quote {
