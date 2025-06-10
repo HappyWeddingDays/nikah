@@ -21,7 +21,6 @@ body {
     background: linear-gradient(#8dd4f7, #9080fa, 80%) no-repeat, 
         url("img/gandengan.jpg") no-repeat center / cover;
     background-blend-mode: soft-light;
-    z-index: -1;
 }
 
 .hero {
