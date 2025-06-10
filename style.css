@@ -389,10 +389,10 @@ body {
     transform: translateY(70%);
 }
 
-/* .typing-explode span {
+.typing-explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
-}*/
+}
 
 .typing-explode span {
     color: black;
