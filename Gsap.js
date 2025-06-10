@@ -119,7 +119,7 @@ targets.forEach(el => {
       start: "bottom 50%",
       end: "top 60%",
       toggleActions: "play reverse play reverse",
-      // markers: true, // aktifkan jika mau lihat garis pemicu
+      markers: true, // aktifkan jika mau lihat garis pemicu
 
       onEnter: () => {
         spans.forEach(span => {
