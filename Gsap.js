@@ -1,4 +1,4 @@
-/* gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 // Fungsi pecah teks menjadi span huruf-huruf
 function splitTextToSpans(element) {
@@ -59,9 +59,9 @@ targets.forEach(el => {
       });
     }
   });
-}); */
+}); 
 
-// JavaScript
+/* / JavaScript
 gsap.registerPlugin(ScrollTrigger);
 
 const element = document.getElementsByTagName('p');
@@ -146,3 +146,4 @@ function explodeInit() {
     }
   });
 }
+*/
