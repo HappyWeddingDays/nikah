@@ -9,9 +9,9 @@ gsap.to('.hero p', {
 
 // Isi cerita
 const isiCerita = [
-  "Jodoh adalah cerminan diri...",
-  "Seorang suami dan istri adalah pakaian...",
-  "Seorang istri dan anak adalah prioritas..."
+  "Jodoh adalah cerminan diri. Alangkah beruntungnya mereka yg saling melengkapi dan mencintai karena Allah",
+  "Seorang suami dan istri adalah pakaian bagi masing-masing. Oleh karena itu mereka harus saling menutupi kekurangan masing-masing dan tidak boleh menampakkan kekurangan di antara mereka pada orang lain, siapapun itu",
+  "Seorang istri dan anak adalah prioritas utama bagi suami dalam hal kasih sayang dan nafkah. Namun dalam hal berbakti, seorang suami tetap memprioritaskan kedua orang tuanya"
 ];
 
 // Ambil semua <p> target
