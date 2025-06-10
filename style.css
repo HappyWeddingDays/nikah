@@ -42,7 +42,7 @@ body {
 .story,
 .quote h2,
 .kehadiran h2,
-.invited h2 {
+.sawer h2 {
     text-shadow: var(--shadow);
 }
 
