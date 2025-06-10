@@ -625,7 +625,7 @@ section .donasi {
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), #FFFFDF, #F4DCD6);
     color: white;
     border-radius: 15px;
-    border: 1px solid #00ff00;
+    border: 1px solid #F4DCD6;
     padding: 20px;
     margin: 10px;
     max-width: 100%;
