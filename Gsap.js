@@ -96,7 +96,7 @@ for (let i = 0; i < timeLineHeadingLists.length; i++) {
     // Efek Buyar
     ScrollTrigger.create({
         trigger: el,
-        start: "top 85%",
+        start: "top 90%",
         end: "top 50%",
         onEnter: () => {
             gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
