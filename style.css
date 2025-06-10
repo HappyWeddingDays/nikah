@@ -154,6 +154,20 @@ body {
     background-position: 0 bottom;
     transform-origin: center bottom;
 }
+.wave1 {
+    -webkit-background-size: 50% 100px;
+    background-size: 50% 100px;
+}
+.wave2 {
+    -webkit-background-size: 50% 80px;
+    background-size: 50% 80px;
+    animation: animate 12s linear infinite;
+}
+.wave3 {
+    -webkit-background-size: 50% 100px;
+    background-size: 50% 100px;
+    animation: animate 18s linear infinite;
+}
 
 
 .home {
