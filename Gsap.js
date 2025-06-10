@@ -54,7 +54,7 @@ targets.forEach(el => {
 
     trigger: el,
 
-    start: "top 80%",
+    start: "top 10%",
 
     end: "top 50%",
    
