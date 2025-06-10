@@ -20,7 +20,7 @@ const timeLineHeadingLists = document.querySelectorAll('.timeline-quote-heading 
 // Bersihkan isi teks di awal agar ketikannya tampak nyata
 timeLineHeadingLists.forEach(p => p.textContent = '');
 
-for (let i = 0; i < timeLineHeadingLists.length; i++) {
+/* for (let i = 0; i < timeLineHeadingLists.length; i++) {
     const el = timeLineHeadingLists[i];
     const text = isiCerita[i];
     
@@ -63,5 +63,53 @@ ScrollTrigger.create({
   onLeaveBack: () => {
     gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
   }
-});
+}); */
+
+for (let i = 0; i < timeLineHeadingLists.length; i++) {
+    const el = timeLineHeadingLists[i];
+    const text = isiCerita[i];
+
+    // Bersihkan isi teks
+    el.textContent = '';
+
+    // Efek ketikan
+    ScrollTrigger.create({
+        trigger: el,
+        start: "top 60%",
+        once: true,
+        onEnter: () => {
+            let currentIndex = 0;
+            const totalDuration = 4000; // 4 detik total
+            const intervalTime = totalDuration / text.length;
+
+            const typingInterval = setInterval(() => {
+                if (currentIndex < text.length) {
+                    el.textContent += text[currentIndex];
+                    currentIndex++;
+                } else {
+                    clearInterval(typingInterval);
+                }
+            }, intervalTime);
+        }
+    });
+
+    // Efek Buyar
+    ScrollTrigger.create({
+        trigger: el,
+        start: "top 85%",
+        end: "top 50%",
+        onEnter: () => {
+            gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
+        },
+        onLeave: () => {
+            gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
+        },
+        onEnterBack: () => {
+            gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
+        },
+        onLeaveBack: () => {
+            gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
+        }
+    });
+}
 
