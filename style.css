@@ -77,6 +77,7 @@ body {
 
 .mynavbar {
     background-color: #F4DCD6 !important;
+    opacity: 80%;
 }
 .mynavbar span,
 .mynavbar h5 {
@@ -130,6 +131,9 @@ body {
     color: #DFC7C1;
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+.home .salam {
+    font-family: "Zain", sans-serif;
 }
 
 .home p {
