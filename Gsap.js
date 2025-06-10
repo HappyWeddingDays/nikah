@@ -16,11 +16,11 @@ const isiCerita = [
 const timeLineHeadingLists = document.querySelectorAll('.timeline-quote-heading p');
 
 // Loop pertama untuk animasi GSAP
-for (let i = 0; i < timeLineHeadingLists.length; i++) {
-    gsap.to(timeLineHeadingLists[i], {
-        duration: 4,
-        delay: 3,
-        text: isiCerita[i],
+//for (let i = 0; i < timeLineHeadingLists.length; i++) {
+//    gsap.to(timeLineHeadingLists[i], {
+//        duration: 4,
+//        delay: 3,
+/*        text: isiCerita[i],
         scrollTrigger: {
             start: "20% bottom",
             end: "60% top",
@@ -36,5 +36,34 @@ for (let i = 0; i < timeLineHeadingLists.length; i++) {
     if (paragraph) {
         paragraph.textContent = isiCerita[i] || `teks ${i + 1}`; // Menggunakan textContent untuk menghilangkan <br>
     }
+} */
+
+// Bersihkan isi teks di awal agar ketikannya tampak nyata
+timeLineHeadingLists.forEach(p => p.textContent = '');
+
+for (let i = 0; i < timeLineHeadingLists.length; i++) {
+    const el = timeLineHeadingLists[i];
+    const text = isiCerita[i];
+    
+    // ScrollTrigger untuk setiap <p>
+    ScrollTrigger.create({
+        trigger: el,
+        start: "top 60%",
+        once: true,
+        onEnter: () => {
+            let currentIndex = 0;
+            const totalDuration = 4000; // 4 detik total
+            const intervalTime = totalDuration / text.length;
+
+            const typingInterval = setInterval(() => {
+                if (currentIndex < text.length) {
+                    el.textContent += text[currentIndex];
+                    currentIndex++;
+                } else {
+                    clearInterval(typingInterval);
+                }
+            }, intervalTime);
+        }
+    });
 }
 
