@@ -374,13 +374,13 @@ body {
     transform: translateY(70%);
 }
 
-.typing-explode span h5 {
+.typing-explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
 }
 
-.typing-explode span {
-    color: white;
+.typing-explode span p{
+    color: black;
     font-family: "Merienda", cursive;
     font-weight: 300;
     font-size: 1.1rem;
