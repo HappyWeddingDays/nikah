@@ -38,7 +38,7 @@ body {
 .hero p,
 .mynavbar,
 .home,
-.info,
+.info h2,
 .story,
 .quote h2,
 .kehadiran h2,
@@ -129,7 +129,7 @@ body {
 }
 
 .home h3 {
-    color: #DFC7C1;
+    color: var(--pink);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -139,7 +139,7 @@ body {
 
 .home p {
     font-size: 1.8rem;
-    color: #FF49FE;
+    color: #F4DCD6;
 }
 
 .home .couple {
@@ -175,7 +175,7 @@ body {
 
 .info {
     background-color: #F8E9E1;
-    color: #FF49FE;
+    color: #F4DCD6;
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
