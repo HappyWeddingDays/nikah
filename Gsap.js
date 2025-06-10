@@ -20,96 +20,76 @@ const timeLineHeadingLists = document.querySelectorAll('.timeline-quote-heading 
 // Bersihkan isi teks di awal agar ketikannya tampak nyata
 timeLineHeadingLists.forEach(p => p.textContent = '');
 
-/* for (let i = 0; i < timeLineHeadingLists.length; i++) {
-    const el = timeLineHeadingLists[i];
-    const text = isiCerita[i];
-    
-    // ScrollTrigger untuk setiap <p>
-    ScrollTrigger.create({
-        trigger: el,
-        start: "top 60%",
-        once: true,
-        onEnter: () => {
-            let currentIndex = 0;
-            const totalDuration = 4000; // 4 detik total
-            const intervalTime = totalDuration / text.length;
-
-            const typingInterval = setInterval(() => {
-                if (currentIndex < text.length) {
-                    el.textContent += text[currentIndex];
-                    currentIndex++;
-                } else {
-                    clearInterval(typingInterval);
-                }
-            }, intervalTime);
-        }
-    });
-}
-
-// Efek Buyar saat scroll
-ScrollTrigger.create({
-  trigger: el,
-  start: "top 85%",
-  end: "top 50%",
-  onEnter: () => {
-    gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
-  },
-  onLeave: () => {
-    gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
-  },
-  onEnterBack: () => {
-    gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
-  },
-  onLeaveBack: () => {
-    gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
-  }
-}); */
-
 for (let i = 0; i < timeLineHeadingLists.length; i++) {
     const el = timeLineHeadingLists[i];
     const text = isiCerita[i];
-
-    // Bersihkan isi teks
     el.textContent = '';
 
-    // Efek ketikan
+    // Efek KETIKAN
     ScrollTrigger.create({
         trigger: el,
         start: "top 60%",
         once: true,
         onEnter: () => {
-            let currentIndex = 0;
-            const totalDuration = 4000; // 4 detik total
+            let index = 0;
+            const totalDuration = 4000;
             const intervalTime = totalDuration / text.length;
 
-            const typingInterval = setInterval(() => {
-                if (currentIndex < text.length) {
-                    el.textContent += text[currentIndex];
-                    currentIndex++;
+            const interval = setInterval(() => {
+                if (index < text.length) {
+                    el.textContent += text[index];
+                    index++;
                 } else {
-                    clearInterval(typingInterval);
+                    clearInterval(interval);
                 }
             }, intervalTime);
         }
     });
 
-    // Efek Buyar
+    // Efek BUYAR & PULIH
     ScrollTrigger.create({
         trigger: el,
-        start: "top 90%",
+        start: "top 85%",
         end: "top 50%",
         onEnter: () => {
-            gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
+            gsap.to(el, {
+                duration: 0.5,
+                letterSpacing: "0.4em",
+                rotate: 10,
+                x: 30,
+                opacity: 0.3,
+                filter: "blur(2px)",
+            });
         },
         onLeave: () => {
-            gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
+            gsap.to(el, {
+                duration: 0.5,
+                letterSpacing: "0em",
+                rotate: 0,
+                x: 0,
+                opacity: 1,
+                filter: "blur(0)",
+            });
         },
         onEnterBack: () => {
-            gsap.to(el, { rotate: 0, x: 0, opacity: 1 });
+            gsap.to(el, {
+                duration: 0.5,
+                letterSpacing: "0em",
+                rotate: 0,
+                x: 0,
+                opacity: 1,
+                filter: "blur(0)",
+            });
         },
         onLeaveBack: () => {
-            gsap.to(el, { rotate: 5, x: 30, opacity: 0.4 });
+            gsap.to(el, {
+                duration: 0.5,
+                letterSpacing: "0.4em",
+                rotate: -10,
+                x: -30,
+                opacity: 0.3,
+                filter: "blur(2px)",
+            });
         }
     });
 }
-
