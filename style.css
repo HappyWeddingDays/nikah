@@ -616,11 +616,39 @@ section .donasi {
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), #FFFFDF, #F4DCD6);
     color: white;
     border-radius: 15px;
+    border: 1px solid #00ff00;
     padding: 20px;
     margin: 10px;
-    width: 400px;
+    max-width: 100%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
     position: relative;
+    overflow: hidden;
+}
+.cards::before {
+    content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #00fff0,
+    transparent 90deg,
+    transparent 180deg,
+    transparent 270deg,
+    transparent 360deg
+  );
+  animation: rotateGlow 2s linear infinite;
+}
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .details {
