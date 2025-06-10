@@ -32,7 +32,7 @@ for (let i = 0; i < timeLineHeadingLists.length; i++) {
         once: true,
         onEnter: () => {
             let index = 0;
-            const totalDuration = 4000;
+            const totalDuration = 1000;
             const intervalTime = totalDuration / text.length;
 
             const interval = setInterval(() => {
