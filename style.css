@@ -364,18 +364,19 @@ body {
     display: block;
 }
 
-.quote > p {
+.quote {
     font-size: 1.4rem !important;
     font-weight: 300;
     letter-spacing: 0.1rem;
-    color: purple;
 }
 
 .quote h3 {
     text-align: center;
     transform: translateY(70%);
 }
-
+.typing-explode span {
+    color: #F4DCD6;
+}
 
 .timeline-quote {
     max-width: 100%;
