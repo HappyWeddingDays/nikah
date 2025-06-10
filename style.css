@@ -100,13 +100,19 @@ body {
 }
 
 /* Snowfall hujan salju */
-.snowfall {
+.snowfall,
+.snowfall::before,
+.snowfall::after {
     position: absolute;
     inset: 0;
     content: '';
     overflow: hidden;
     background-image: radial-gradient( circle at 5% 10%, #fff 3px, transparent 6px),
         radial-gradient( circle at 65% 30%, #fff 3px, transparent 4px);
+}
+
+.snowfall {
+    background-size: 65% 100%;
 }
 
 .sticky-top {
