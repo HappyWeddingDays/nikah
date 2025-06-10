@@ -149,7 +149,7 @@ body {
 .wave {
     position: absolute;
     width: 200%;
-    height: 30%;
+    height: 10%;
     background-repeat: repeat no-repeat;
     background-position: 0 bottom;
     transform-origin: center bottom;
