@@ -54,9 +54,11 @@ targets.forEach(el => {
 
     trigger: el,
 
-    start: "top 90%",
+    start: "top 50%",
 
     end: "top 50%",
+   
+    markers: true,
 
     toggleActions: "play reverse play reverse", // agar bisa balik saat scroll naik
 
