@@ -43,7 +43,7 @@ for (let i = 0; i < timeLineHeadingLists.length; i++) {
     // Efek LEDAKAN (huruf beterbangan)
 ScrollTrigger.create({
     trigger: el,
-    start: "top 90%",
+    start: "top 120%",
     once: true,
     onEnter: () => {
         const chars = el.textContent.split('');
