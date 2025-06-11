@@ -186,6 +186,7 @@ body {
     margin-bottom: 1rem;
 }
 .home .salam {
+    position: absolute;
     margin-bottom: 10rem;
     padding-bottom: 10rem;
     background: url(img/bg-nikah.jpg) center / cover no-repeat;
