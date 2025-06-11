@@ -10,7 +10,7 @@ body {
     font-family: "Delius Swash Caps", cursive;
     font-weight: 400;
 }
-body > p {
+body p {
     color:#FFDCD6;
 }
 
