@@ -128,7 +128,6 @@ body {
 }
 /* Wave animasi*/
 .home .line {
-    bottom: 15rem;
     position: absolute;
     width: 100%;
     height: 200px;
