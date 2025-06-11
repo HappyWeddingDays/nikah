@@ -275,6 +275,11 @@ body {
     font-size: 1.7rem;
 }
 
+/* Particles-js*/
+.particles-js {
+    height: 100%;
+}
+
 .story {
     max-width: 100%;
     overflow: hidden;
