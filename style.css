@@ -493,7 +493,7 @@ body p {
     transform: translateY(70%);
 }
 
-.typing-text {
+.typing-text p{
     font-family: "Merienda", cursive;
     color: #F4DCD6;
     overflow: hidden;
