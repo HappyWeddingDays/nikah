@@ -10,6 +10,8 @@ body {
     font-family: "Delius Swash Caps", cursive;
     font-weight: 400;
 }
+body > p {
+    color:#FFDCD6;
 
 .hero::before {
     content: '';
