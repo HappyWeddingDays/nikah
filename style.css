@@ -107,7 +107,7 @@ body {
 .snowfall,
 .snowfall::before,
 .snowfall::after {
-    position: inline-block;
+    position: absolute;
     inset: 0;
     content: '';
     overflow: hidden;
