@@ -571,7 +571,6 @@ body p {
 
 
 .timeline-quote li .timeline-quote-panel {
-    max-width: 100%;
     width: 55%;
     float: left;
     border: 1px solid #ccc;
