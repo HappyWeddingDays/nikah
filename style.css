@@ -150,7 +150,7 @@ body {
 }
 
 .sticky-top {
-    display: hidden;
+    display: none;
 }
 /* Wave animasi
 .home .line {
