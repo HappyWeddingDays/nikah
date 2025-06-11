@@ -484,6 +484,8 @@ body p {
 }
 
 .typing-text {
+    font-family: "Merienda", cursive;
+    color: #F4DCD6;
     overflow: hidden;
     display: inline-block;
 }
