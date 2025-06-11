@@ -428,13 +428,15 @@ body {
     transform: translateY(70%);
 }
 
-.explode span {
+/*.explode span {
     display: inline-block;
-    white-space: pre;         /* Hindari kolaps spasi */
-    word-break: keep-all;     /* Hindari pecah kata */
+    white-space: pre;         /* Hindari kolaps spasi 
+    word-break: keep-all;     /* Hindari pecah kata 
 }
 
 .explode {
+    margin-top: 10px;
+    padding-top: 20px;
     color: #000;
     font-family: "Merienda", cursive;
     font-size: 1.1rem;
