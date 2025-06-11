@@ -116,6 +116,7 @@ body {
 }
 
 .snowfall {
+    animation: snowfall 20s linear infinite;
     background-size: 65% 100%;
 }
 
@@ -128,6 +129,14 @@ body {
 .snowfall::after {
     inset: -8rem 0 0;
     background-size: 32% 100%;
+}
+
+@keyframes snowfall {
+    0% { 
+        --y: 1%;
+    }
+    100% {
+        --y: 101;
 }
 
 .sticky-top {
