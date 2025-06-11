@@ -111,8 +111,8 @@ body {
     inset: 0;
     content: '';
     overflow: hidden;
-    background-image: radial-gradient( circle at 8% calc(var(--y) *1), #fff 3px, transparent 10px),
-        radial-gradient( circle at 65% calc(var(--y) *1.3), #fff 3px, transparent 6px);
+    background-image: radial-gradient( circle at 8% calc(var(--y) *1), #fff 6px, transparent 10px),
+        radial-gradient( circle at 65% calc(var(--y) *1.3), #fff 6px, transparent 6px);
     pointer-events: none;
 }
 
