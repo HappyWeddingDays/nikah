@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Fungsi pecah teks menjadi span huruf-huruf
+/*/ Fungsi pecah teks menjadi span huruf-huruf
 function splitTextToSpans(element) {
   const text = element.textContent;
   element.innerHTML = ''; // Kosongkan isi asli
