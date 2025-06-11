@@ -209,7 +209,7 @@ body {
 
 .home {
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #EBEDEF !important;
+    background-image: url(img/wave1.svg) center;
     background-size: cover;
     min-height: 100vh;
     margin-top: -8rem;
