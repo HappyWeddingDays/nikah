@@ -1,18 +1,23 @@
 AOS.init();
 
 
-//snow 
-const snowContainer = document.getElementById("snow-block");
+document.addEventListener("DOMContentLoaded", function () {
+    const typingElements = document.querySelectorAll(".typing-text p");
 
-  function createSnowflake() {
-    const snowflake = document.createElement("div");
-    snowflake.classList.add("snowflake");
-    snowflake.textContent = "❄";
-    snowflake.style.left = Math.random() * 100 + "%";
-    snowflake.style.fontSize = 10 + Math.random() * 20 + "px";
-    snowflake.style.animationDuration = 3 + Math.random() * 2 + "s";
-    snowContainer.appendChild(snowflake);
-    setTimeout(() => snowflake.remove(), 6000);
-  }
+    typingElements.forEach((element, index) => {
+        const text = element.innerHTML;
+        element.innerHTML = "";
+        let i = 0;
 
-  setInterval(createSnowflake, 300);
+        function typeChar() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeChar, 25); // atur kecepatan ketik di sini
+            }
+        }
+
+        // Menunda ketik sesuai urutan agar tidak bareng semua
+        setTimeout(typeChar, index * 1000);
+    });
+});
