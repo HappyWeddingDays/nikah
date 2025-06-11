@@ -188,7 +188,7 @@ body {
 .home .salam {
     background: url(img/bg-nikah.jpg) center / cover no-repeat;
     font-family: "Zain", sans-serif;
-    width: 100%;
+    width: 600px;
     max-height: 60vh;
 }
 
