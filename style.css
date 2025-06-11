@@ -483,27 +483,6 @@ body p {
     transform: translateY(70%);
 }
 
-.explode > span {
-    font-family: "Merienda", cursive;
-    color: #000;
-    margin-top: 20px;
-    padding-top: 10px;
-    display: inline-block;
-    line-height: 0.4em;
-    font-size: 16px;
-    letter-spacing: normal;
-    vertical-align: middle;
-    transform: none;
-    transition: all 0.3s ease;
-}
-
-.explode {
-    color: #000;
-    font-family: "Merienda", cursive;
-    white-space: normal;
-    line-height: 1em;
-}
-
 /*.explode span {
     color: #FF49FE;
     font-family: "Caveat", cursive;
