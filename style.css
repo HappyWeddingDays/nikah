@@ -218,6 +218,7 @@ body p {
     margin-top: -8rem;
     padding-top: 20rem;
     padding-bottom: 5rem;
+    z-index: 99;
 }
 
 .home h2,
