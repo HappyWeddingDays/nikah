@@ -483,7 +483,7 @@ body p {
     transform: translateY(70%);
 }
 
-.explode > span {
+/*.explode > span {
     font-family: "Merienda", cursive;
     color: #000;
     margin-top: 20px;
@@ -495,7 +495,7 @@ body p {
     vertical-align: middle;
     transform: none;
     transition: all 0.3s ease;
-}
+}*/
 
 .explode {
     color: #000;
