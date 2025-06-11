@@ -484,19 +484,23 @@ body p {
 }
 
 .explode > span {
+    font-family: "Merienda", cursive;
     margin-top: 20px;
     padding-top: 10px;
     display: inline-block;
-    white-space: pre;         /* Hindari kolaps spasi */
-    word-break: keep-all;     /* Hindari pecah kata */
+    line-height: 1em;
+    font-size: inherit;
+    letter-spacing: normal;
+    vertical-align: middle;
+    transform: none;
+    transition: all 0.3s ease;
 }
 
 .explode {
     color: #000;
     font-family: "Merienda", cursive;
-    font-size: 1.1rem;
-    word-spacing: 0.05em;
-    display: inline-block;
+    white-space: normal;
+    line-height: 1.5em;
 }
 
 /*.explode span {
