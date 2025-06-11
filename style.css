@@ -152,7 +152,7 @@ body {
 .sticky-top {
     display: hidden;
 }
-/* Wave animasi*/
+/* Wave animasi
 .home .line {
     position: relative;
     width: 100%;
@@ -205,7 +205,7 @@ body {
     100% {
         transform: translateX(-50%) translateZ(0) translateY(1);
     }
-}
+} */
 
 .home {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #EBEDEF !important;
