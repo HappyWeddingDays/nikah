@@ -210,16 +210,6 @@ body p {
     }
 } */
 
-.explode span {
-  display: inline-block;
-  white-space: pre;       /* Jaga spasi */
-  word-break: keep-all;   /* Jangan potong kata */
-  line-height: inherit;   /* Warisi jarak baris */
-  font-family: inherit;   /* Warisi font */
-  font-size: inherit;     /* Warisi ukuran font */
-  color: inherit;         /* Warisi warna */
-}
-
 .home {
     position: relative;
     background-image: url(img/wave1.svg) center;
