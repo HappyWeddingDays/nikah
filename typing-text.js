@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ScrollTrigger.create({
       trigger: el,
       start: "center center",
-      once: true, // hanya sekali
+      once: false, // hanya sekali
       markers: true,
       onEnter: () => {
         if (hasTyped) return;
