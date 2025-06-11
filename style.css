@@ -139,7 +139,7 @@ body {
         --y: 1%;
     }
     100% {
-        --y: 101;
+        --y: 101%;
     }
 }
 
@@ -780,7 +780,7 @@ section .donasi {
       }
 }
 
-cards::after {
+.cards::after {
       content: '';
       position: absolute;
       top: 0;
