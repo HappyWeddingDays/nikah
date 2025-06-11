@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: el,
       start: "center center",
       once: true, // hanya sekali
+      markers: true,
       onEnter: () => {
         if (hasTyped) return;
         hasTyped = true;
