@@ -489,9 +489,9 @@ body p {
     margin-top: 20px;
     padding-top: 10px;
     display: inline-block;
-    line-height: 1em;
+    line-height: 0.4em;
     font-size: 0.7em;
-    letter-spacing: normal;
+    letter-spacing: 0.3em;
     vertical-align: middle;
     transform: none;
     transition: all 0.3s ease;
