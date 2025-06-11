@@ -245,7 +245,8 @@ body p {
     font-family: "Zain", sans-serif;
 }
 
-.home p {
+.home p,
+.story span {
     font-size: 1.8rem;
     color: #F4DCD6;
 }
@@ -340,7 +341,6 @@ body p {
     padding-bottom: 8rem;
 }
 
-.story span,
 .gallery span,
 .kehadiran p {
     text-transform: uppercase;
@@ -360,7 +360,7 @@ body p {
 .story h3 {
     text-align: center;
     transform: translateY(70%);
-    color: #FF49FE;
+    color: #F4DCD6;
     font-size: 1.8rem;
 }
 
