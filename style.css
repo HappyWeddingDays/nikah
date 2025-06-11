@@ -218,7 +218,7 @@ body p {
     margin-top: -8rem;
     padding-top: 20rem;
     padding-bottom: 5rem;
-    z-index: 99;
+    display: inline-block;
 }
 
 .home h2,
@@ -241,7 +241,7 @@ body p {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
-.home .salam {
+.home .salam . {
     font-family: "Zain", sans-serif;
 }
 
@@ -483,10 +483,10 @@ body p {
     transform: translateY(70%);
 }
 
-/*.explode span {
-    color: #FF49FE;
-    font-family: "Caveat", cursive;
-}*/
+.typing-text {
+    overflow: hidden;
+    display: inline-block;
+}
 
 .timeline-quote {
     max-width: 100%;
