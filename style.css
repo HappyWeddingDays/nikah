@@ -127,7 +127,7 @@ body {
     display: hidden;
 }
 /* Wave animasi*/
-.line {
+.home .line {
     bottom: 15rem;
     position: absolute;
     width: 100%;
@@ -135,19 +135,19 @@ body {
     overflow: hidden;
     background: purple;
 }
-.line1 {
+.home .line1 {
     z-index: 15;
     opacity: 0.5;
 }
-.line2 {
+.home .line2 {
     z-index: 10;
     opacity: 0.7;
 }
-.line3 {
+.home .line3 {
     z-index: 5;
 }
 
-.wave {
+.home .wave {
     position: absolute;
     width: 1000px;
     height: 200%;
@@ -155,16 +155,16 @@ body {
     background-position: 0 bottom;
     transform-origin: center bottom;
 }
-.wave1 {
+.home .wave1 {
     -webkit-background-size: 50% 100px;
     background-size: 50% 100px;
 }
-.wave2 {
+.home .wave2 {
     -webkit-background-size: 50% 80px;
     background-size: 50% 80px;
     animation: waveAnimate 12s linear infinite;
 }
-.wave3 {
+.home .wave3 {
     -webkit-background-size: 50% 100px;
     background-size: 50% 100px;
     animation: waveAnimate 18s linear infinite;
