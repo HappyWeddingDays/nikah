@@ -705,7 +705,7 @@ section .donasi {
       }
 }
 
-cards::after {
+.cards::after {
       content: '';
       position: absolute;
       top: 0;
@@ -722,30 +722,6 @@ cards::after {
 .details {
     margin-top: 10px;
 }
-
-/*Hujan salju*/
-.snow-block {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    background: #333;
-  }
-
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    color: white;
-    font-size: 1em;
-    animation: fall 4s linear infinite;
-    pointer-events: none;
-  }
-
-  @keyframes fall {
-    to {
-      transform: translateY(300px) rotate(360deg);
-      opacity: 0;
-    }
-  }
 
 
 /* media querry responsive*/
