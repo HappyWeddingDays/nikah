@@ -12,6 +12,7 @@ body {
 }
 body > p {
     color:#FFDCD6;
+}
 
 .hero::before {
     content: '';
