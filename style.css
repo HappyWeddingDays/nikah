@@ -185,6 +185,7 @@ body {
     margin-bottom: 1rem;
 }
 .home .salam {
+    background: url(img/bg-nikah.jpg) cover / center no-repeat;
     font-family: "Zain", sans-serif;
 }
 
