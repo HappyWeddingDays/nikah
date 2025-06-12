@@ -165,6 +165,20 @@ body {
     padding-bottom: 5rem;
 }
 
+.home .salam {
+    position: absolute;
+    margin: 0 0 20rem;
+    padding-bottom: 15rem;
+    background: url(img/bg-nikah.jpg) center / cover no-repeat;
+    font-family: "Zain", sans-serif;
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .home h2,
 .home h4,
 .info h2,
@@ -184,19 +198,6 @@ body {
     color: var(--pink);
     font-size: 2rem;
     margin-bottom: 1rem;
-}
-.home .salam {
-    position: absolute;
-    margin: 0 0 20rem;
-    padding-bottom: 15rem;
-    background: url(img/bg-nikah.jpg) center / cover no-repeat;
-    font-family: "Zain", sans-serif;
-    width: 100%;
-    max-width: 800px;
-    height: 90vh;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 .home p {
