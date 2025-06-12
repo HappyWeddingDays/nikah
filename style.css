@@ -194,7 +194,8 @@ body {
     width: 1000px;
     max-height: 90vh;
     top: 50%;
-    left: 50%;
+    left: 0;
+    right: 0;
 }
 
 .home p {
