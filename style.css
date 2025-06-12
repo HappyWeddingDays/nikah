@@ -187,11 +187,11 @@ body {
 }
 .home .salam {
     position: absolute;
-    margin-bottom: 10rem;
-    padding-bottom: 10rem;
+    margin-bottom: 20rem;
+    padding-bottom: 15rem;
     background: url(img/bg-nikah.jpg) center / cover no-repeat;
     font-family: "Zain", sans-serif;
-    width: 1000px;
+    width: 100%;
     max-height: 90vh;
     top: 50%;
     left: 0;
