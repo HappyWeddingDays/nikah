@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
       end: "bottom center",
       once: false, // hanya sekali
       markers: true,
+      toggleActions: "play none none reverse",
       onEnter: () => {
         if (hasTyped) return;
         hasTyped = true;
@@ -44,10 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
         duration: 3,
         ease: "power2.out",
         scrollTrigger: {
-          markers: true,
           trigger: elem,
           start: "center center",
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
       },
     );
