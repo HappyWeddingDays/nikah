@@ -333,7 +333,7 @@
       </div>
 
       <!-- Quote atau Ayat (Optional) -->
-      <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="text-center mb-4 hero-img" data-aos="fade-up" data-aos-delay="600">
         <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
           <p class="font-scriptAccent text-xl lg:text-2xl text-clr-primary mb-4 italic">
             "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri,
