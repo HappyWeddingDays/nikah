@@ -72,4 +72,3 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 4,
     delay: 1,
   });
-});
