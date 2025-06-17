@@ -52,3 +52,24 @@ document.addEventListener("DOMContentLoaded", function() {
       },
     );
   });
+
+ // Parallax hero image
+  gsap.to(".hero-img", {
+    scale: 1.05,
+    yPercent: -5,
+    scrollTrigger: {
+      trigger: "#section1",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  // CTA animasi masuk
+  gsap.from(".quotes", {
+    opacity: 0,
+    y: 20,
+    duration: 4,
+    delay: 1,
+  });
+});
