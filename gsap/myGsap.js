@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     ScrollTrigger.create({
       trigger: el,
-      start: "top 60%",
+      start: "top center",
       end: "bottom center",
       once: false, // hanya sekali
       markers: true,
