@@ -64,11 +64,3 @@ document.addEventListener("DOMContentLoaded", function() {
       scrub: true,
     },
   });
-
-  // CTA animasi masuk
-  gsap.from(".quotes", {
-    opacity: 0,
-    y: 20,
-    duration: 4,
-    delay: 1,
-  });
