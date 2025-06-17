@@ -44,8 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
         duration: 3,
         ease: "power2.out",
         scrollTrigger: {
+          markers: true,
           trigger: elem,
-          start: "top 80%",
+          start: "center center",
           toggleActions: "play none none none",
         },
       },
