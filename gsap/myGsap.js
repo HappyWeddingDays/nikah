@@ -32,3 +32,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+ // Efek scroll reveal
+  gsap.utils.toArray(".reveal").forEach((elem) => {
+    gsap.fromTo(
+      elem,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      },
+    );
+  });
