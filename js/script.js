@@ -336,3 +336,22 @@ function showNotification(message, type = "success") {
     document.body.removeChild(notification);
   }, 3000);
 }
+
+//========  Navbar Hilang ========
+
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    // Scroll ke bawah → sembunyikan navbar
+    navbar.classList.add("-translate-y-full", "opacity-0");
+  } else {
+    // Scroll ke atas → tampilkan navbar
+    navbar.classList.remove("-translate-y-full", "opacity-0");
+  }
+
+  lastScrollY = currentScrollY;
+});
