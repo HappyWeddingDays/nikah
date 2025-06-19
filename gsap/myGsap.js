@@ -418,3 +418,13 @@ ScrollTrigger.matchMedia({
     });
   },
 });
+/*
+ScrollTrigger.create({
+  trigger: "#quotes", // section mempelai
+  start: "top top", // ketika memulai menyentuh atas layar
+  end: "bottom+=100% top", // berakhir saat seluruh konten selesai discroll
+  pin: true, // efek sticky (terpaku)
+  pinSpacing: true, // tetap menyisakan ruang di bawahnya
+  scrub: false,
+  markers: true, // bukan animasi, langsung pin
+}); */
