@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
+//Efen text-typing layar besar
+
 document.addEventListener("DOMContentLoaded", function() {
   ScrollTrigger.matchMedia({
     "(min-width: 769px)": function() {
@@ -232,7 +234,7 @@ ScrollTrigger.matchMedia({
 }); */
 
 // Efek scroll reveal
-gsap.utils.toArray(".reveal").forEach((elem) => {
+/*gsap.utils.toArray(".reveal").forEach((elem) => {
   gsap.fromTo(
     elem,
     { opacity: 0, y: 50 },
@@ -249,4 +251,170 @@ gsap.utils.toArray(".reveal").forEach((elem) => {
       },
     },
   );
+});
+*/
+// efek reveal in out Layar besar
+//
+document.addEventListener("DOMContentLoaded", function() {
+  const quote = document.querySelector("#quote-text");
+  const verse = document.querySelector("#verse-text");
+  const originalText = quote.innerHTML;
+  quote.innerHTML = ""; // Kosongkan teks awal untuk efek ketik
+
+  let hasTyped = false;
+
+  // Animasi translateZ untuk quote
+  ScrollTrigger.matchMedia({
+    "(min-width: 769px)": function() {
+      gsap.from(quote, {
+        translateZ: -200, // Mulai dari "jauh" di sumbu Z
+        opacity: 0, // Mulai transparan
+        filter: "blur(10px)", // Mulai kabur
+        duration: 1.5,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: "#reveal-inOut",
+          start: "top 80%", // Mulai saat elemen 80% dari bawah viewport
+          toggleActions: "play none none reverse",
+          //markers: true, // Hapus di produksi
+        },
+        onComplete: () => {
+          // Mulai efek ketik setelah translateZ selesai
+          if (hasTyped) return;
+          hasTyped = true;
+
+          let i = 0;
+          function typeChar() {
+            if (i < originalText.length) {
+              quote.innerHTML += originalText.charAt(i);
+              i++;
+              setTimeout(typeChar, 30); // Kecepatan ketik (30ms per karakter)
+            } else {
+              // Animasi fade-in untuk verse-text setelah ketik selesai
+              gsap.to(verse, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.in",
+              });
+            }
+          }
+          typeChar();
+        },
+      });
+    },
+  });
+  // Animasi translateZ untuk quote
+  ScrollTrigger.matchMedia({
+    "(max-width: 768px)": function() {
+      gsap.from(quote, {
+        translateZ: -200, // Mulai dari "jauh" di sumbu Z
+        opacity: 0, // Mulai transparan
+        filter: "blur(10px)", // Mulai kabur
+        duration: 1.5,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: "#reveal-inOut-layar-kecil",
+          start: "top 80%", // Mulai saat elemen 80% dari bawah viewport
+          toggleActions: "play none none reverse",
+          //markers: true, // Hapus di produksi
+        },
+        onComplete: () => {
+          // Mulai efek ketik setelah translateZ selesai
+          if (hasTyped) return;
+          hasTyped = true;
+
+          let i = 0;
+          function typeChar() {
+            if (i < originalText.length) {
+              quote.innerHTML += originalText.charAt(i);
+              i++;
+              setTimeout(typeChar, 30); // Kecepatan ketik (30ms per karakter)
+            } else {
+              // Animasi fade-in untuk verse-text setelah ketik selesai
+              gsap.to(verse, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.in",
+              });
+            }
+          }
+          typeChar();
+        },
+      });
+    },
+  });
+});
+
+//efek snap scroll layar besar
+
+ScrollTrigger.matchMedia({
+  "(min-width: 769px)": function() {
+    gsap.to("#langit", {
+      y: 60,
+      scale: 1.1,
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to("#bulan", {
+      y: 150,
+      scale: 1.2,
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+    gsap.to("#couple", {
+      y: -150,
+      scale: 1.1,
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  },
+});
+// Efek snap scroll layar kecil
+ScrollTrigger.matchMedia({
+  "(max-width: 768px)": function() {
+    gsap.to("#langit", {
+      y: 55,
+      scale: 1.1,
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to("#bulan", {
+      y: 100,
+      scale: 1.2,
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+    gsap.to("#couple", {
+      y: -70,
+      scale: 1.1,
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  },
 });

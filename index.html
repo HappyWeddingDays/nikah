@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id" class="smooth">
+<html lang="id" class="smooth overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,39 @@
   <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+  <!-- Favicon & Meta -->
+  <link rel="icon" href="https://fav.farm/🛸" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Dark Mode Storage Check -->
+  <script>
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+  <!-- Auto Dark Mode -->
+  <script>
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!localStorage.getItem("theme") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
 
   <!-- Data Aos Cdn -->
 
@@ -42,8 +75,9 @@
   </script>
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet" />
+  <!-- css text reveal-->
+  <link href="css/reveal.css" rel="stylesheet" />
 
-  <!-- Wave Animmate -->
   <style>
     /* Keyframes */
     @keyframes animate {
@@ -158,19 +192,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Poppins&display=swap"
     rel="stylesheet" />
-  <!-- Arabic Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
 </head>
 
-<body class="font-bodySans text-clr-text leading-body">
+<body
+  class="font-bodySans text-clr-text leading-body bg-white dark:bg-black text-black dark:text-white snap-y snap-mandatory overflow-x-hidden">
   <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-300">
     <div class="container mx-auto flex justify-between items-center h-16 px-4">
       <!-- Logo -->
-      <div class="text-2xl font-scriptAccent text-clr-primary">Sugeng & Shofia</div>
+      <div class="text-2xl font-scriptAccent text-clr-primary">Fulan & Fulanah</div>
 
       <!-- Desktop Navigation Links -->
       <ul class="hidden md:flex space-x-6">
@@ -210,18 +240,25 @@
     </div>
   </nav>
   <!-- Hero Section -->
-  <section id="hero"
-    class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden reveal">
-    <div class="absolute overflow-hidden inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-[-1] opacity-75"
-      style="background-image: url('img/bg3d.gif');" data-parallax="-0.5"></div>
+  <section id="hero" class="block h-screen flex items-center justify-center text-center text-white overflow-hidden">
+    <div id="hero-section"
+      class="absolute flex flex-col items-center justify-center w-screen h-screen overflow-hidden text-center snap-start overflow-hidden">
+      <img src="img/langit.png" alt="planet" id="langit" class="absolute w-full h-[1600px] object-cover -z-2 top-0">
+      <!-- Planet Image (bg3.png - Moon) -->
+      <img src="img/bulan.png" alt="planet" id="bulan"
+        class="absolute bottom-[60%] -translate-x-1/2 left-1/2 md:w-[700px] z-10">
+
+      <!-- Foreground Image (bg4.png - Couple) -->
+      <img src="img/couple.png" alt="background" id="couple" class="absolute w-full h-full object-cover z-40">
+    </div>
     <!-- Overlay untuk membuat teks lebih terbaca -->
     <div class="absolute inset-0 bg-black opacity-35"></div>
 
     <!-- Konten Hero -->
-    <div class="relative z-10 p-4 max-w-4xl">
+    <div class="relative z-10 p-4 max-w-4xl -top-10 md:top-10">
       <!-- Nama Pengantin dengan font script -->
       <h1 class="font-scriptAccent text-h1-size mb-4 tracking-wide" data-aos="fade-down" data-aos-delay="100">
-        Sugeng &amp; Shofia
+        Fulan &amp; Fulanah
       </h1>
 
       <!-- Tanggal Pernikahan -->
@@ -237,10 +274,6 @@
       </div>
 
       <!-- Call to Action Button -->
-      <a href="#couple" class="btn-primary inline-block text-decoration-none card" data-aos="fade-up"
-        data-aos-delay="600">
-        Lihat Undangan
-      </a>
     </div>
 
     <!-- Scroll Indicator -->
@@ -254,15 +287,13 @@
 
   <!-- Couple Section -->
   <section id="couple" class="relative block overflow-hidden py-section-y bg-clr-base relative z-10">
-    <div class="container mx-auto px-4 mt-8 pt-24">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 mt-8 pt-24">
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 class="font-headingSerif text-h2-size text-clr-primary mb-4" data-aos="fade-up">
           Mempelai
         </h2>
-        <h3 class="text-lg text-clr-primary mb-2" style="font-family: 'Amiri', serif;">
-          السلام عليكم ورحمة الله وبركاته </h3>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto pt-12" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto pt-12">
           Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri
           acara pernikahan kami.
         </p>
@@ -276,7 +307,7 @@
           <!-- Foto Mempelai Wanita - Ganti dengan foto yang sesuai -->
           <div class="relative mb-6">
             <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img src="img/shf.jpg" alt="Shofia"
+              <img src="img/hijab.jpg" alt="Fulanah"
                 class="w-full h-full object-cover bg-gradient-to-br from-pink-200 to-pink-300">
             </div>
             <!-- Decorative elements -->
@@ -290,11 +321,11 @@
               Mempelai Wanita
             </h3>
             <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
-              Shofia Salsabila
+              <div id="#reveal-inOut"> Fulanah + </div>
             </h4>
             <div class="text-gray-600 leading-relaxed">
               <p class="mb-2">Putri pertama dari</p>
-              <p class="font-semibold">Bapak Ahmad Mufarihun & Ibu Uswatun Khasanah</p>
+              <p class="font-semibold">Bapak Fulan + & Ibu Fulanah +</p>
               <p class="text-sm mt-2 italic">
                 <!-- Tambahkan informasi tambahan jika diperlukan -->
               </p>
@@ -319,7 +350,7 @@
           <!-- Foto Mempelai Pria - Ganti dengan foto yang sesuai -->
           <div class="relative mb-6">
             <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img src="img/pp1.jpg" alt="Sugengsaputra"
+              <img src="img/pp1.jpg" alt="Fulansaputra"
                 class="w-full h-full object-cover bg-gradient-to-br from-blue-200 to-blue-300">
             </div>
             <!-- Decorative elements -->
@@ -333,11 +364,12 @@
               Mempelai Pria
             </h3>
             <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
-              Sugeng Saputra
+              Fulan +
             </h4>
             <div class="text-gray-600 leading-relaxed">
               <p class="mb-2">Putra ketiga dari</p>
-              <p class="font-semibold">Bapak Suparlan & Ibu Sriami</p>
+              <p id="reveal-inOut-layar-kecil" class="font-semibold">Bapak Fulan & Ibu Fulanah</p>
+              <!-- revealin-Out layar kecil  -->
               <p class="text-sm mt-2 italic">
                 <!-- Tambahkan informasi tambahan jika diperlukan -->
               </p>
@@ -346,19 +378,18 @@
         </div>
 
       </div>
-
-      <!-- Quote atau Ayat (Optional) -->
-      <div class="deep-in text-center mb-4" data-aos="fade-up" data-aos-delay="600">
+      <!-- Quote atau Ayat -->
+      <div class="deep-in text-center mb-4">
         <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <p class="font-scriptAccent text-xl lg:text-2xl text-clr-primary mb-4 italic">
+          <p id="quote-text" class="font-scriptAccent text-xl lg:text-2xl text-clr-primary mb-4 italic">
             "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri,
             supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."
           </p>
-          <p class="text-sm text-gray-600 font-semibold">
+          <p id="verse-text" class="text-sm text-gray-600 font-semibold">
             QS. Ar-Rum: 21
           </p>
         </div>
-      </div>
+      </div><!-- tutup quote -->
     </div>
   </section>
   <!-- Date Section -->
@@ -975,7 +1006,7 @@
           <!-- Wedding Couple Info -->
           <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
             <h3 class="font-scriptAccent text-2xl text-clr-primary mb-3">
-              Sugeng &amp; Shofia
+              Fulan &amp; Fulanah
             </h3>
             <p class="text-gray-600 mb-4">
               Sabtu, 23 Agustus 2025
@@ -1079,7 +1110,7 @@
         <div class="border-t border-gray-200 pt-6" data-aos="fade-up" data-aos-delay="1000">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-600 mb-4 md:mb-0">
-              © 2025 Sugeng &amp; Shofia • Design with ❤️
+              © 2025 Fulan &amp; Fulanah • Design with ❤️
             </p>
             <p class="text-sm text-gray-500">
               Made with love for our special day
@@ -1152,7 +1183,26 @@
     });
   </script>
   <!-- Custom JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="/js/script.jsx"></script>
+  <script src="/js/reveal.jsx" type="module"></script>
+  <script src="/js/khoshnus.jsx" type="module"></script>
+
+  <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script>
+    new VConsole(); // Aktifkan console virtual
+  </script>
+  <script>
+    document.querySelectorAll("*").forEach((el) => {
+      if (el.scrollWidth > document.documentElement.clientWidth) {
+        const tag = el.tagName.toLowerCase();
+        const id = el.id ? `#${el.id}` : "";
+        const cls = el.className ? `.${el.className.toString().replace(/\s+/g, ".")}` : "";
+        const label = `${tag}${id}${cls}`;
+        console.log("⚠️ Overflowing:", label, el);
+        el.style.outline = "2px solid red";
+      }
+    });
+  </script> -->
 </body>
 
 </html>
