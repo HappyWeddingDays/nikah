@@ -21,7 +21,7 @@ const GOOGLE_SHEETS_CONFIG = {
   timeout: 10000,
 
   // Retry configuration
-  maxRetries: 1, // Diatur ke 1 sesuai permintaan user sebelumnya
+  maxRetries: 0, // Diatur ke 1 sesuai permintaan user sebelumnya
   retryDelay: 1000,
 };
 
