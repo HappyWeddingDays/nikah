@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling untuk pengalaman yang lebih baik */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styling dengan background gelap dan font modern */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0c0c0c 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  /* Mencegah horizontal scroll */
+  line-height: 1.6;
+}
+
+/* ===== CONTAINER DAN LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Content wrapper untuk layout flexbox */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  min-height: 80vh;
+}
+
+/* Reverse layout untuk variasi visual */
+.content-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== HEADER SECTION ===== */
+.header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #2a2a2a 0%, #0c0c0c 70%);
+  position: relative;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ffffff, #cccccc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== SCENE SECTIONS ===== */
+.scene {
+  perspective: 1000px;
+  /* Memberikan perspektif 3D */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Alternating background untuk setiap scene */
+.scene:nth-child(even) {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0c0c0c 50%, #1a1a1a 100%);
+}
+
+.scene:nth-child(odd) {
+  background: linear-gradient(135deg, #0c0c0c 0%, #2a2a2a 50%, #0c0c0c 100%);
+}
+
+/* ===== TEXT CONTENT ===== */
+.text-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* ===== FEATURES LIST ===== */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ===== CARD STYLES (ELEMEN UTAMA UNTUK EFEK 3D) ===== */
+.card {
+  transform-style: preserve-3d;
+  /* Mempertahankan transformasi 3D */
+  transition: transform 0.3s ease;
+  will-change: transform;
+  /* Optimasi performa untuk animasi */
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+}
+
+/* Card dengan ukuran lebih besar */
+.card.large {
+  max-width: 700px;
+}
+
+/* Inner card untuk efek berlapis */
+.card-inner {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling untuk gambar dalam card */
+.card img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Gradient overlay untuk efek visual */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+/* Content overlay pada card */
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%);
+  color: white;
+  z-index: 2;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+  padding: 60px 0 40px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-content p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+}
+
+/* Tech stack badges */
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech-item {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #444;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background: linear-gradient(135deg, #555 0%, #777 100%);
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .content-wrapper {
+    gap: 40px;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .card {
+    max-width: 500px;
+  }
+
+  .card.large {
+    max-width: 550px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Stack layout untuk mobile */
+  .content-wrapper,
+  .content-wrapper.reverse {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  /* Card responsif untuk mobile */
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .card.large {
+    max-width: 100%;
+  }
+
+  .card img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* Tech stack untuk mobile */
+  .tech-stack {
+    justify-content: center;
+  }
+
+  .tech-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Features list untuk mobile */
+  .features-list {
+    align-items: center;
+  }
+
+  .feature-item {
+    justify-content: center;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== HOVER EFFECTS ===== */
+.card:hover {
+  transform: translateZ(10px) rotateX(2deg) rotateY(2deg);
+}
+
+.card img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.card,
+.card img,
+.card-inner {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Loading state untuk gambar */
+.card img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card img.loaded {
+  opacity: 1;
+}

@@ -279,7 +279,7 @@ html {
 }
 
 /*Wave animate */
-@keyframes wave-left {
+/* @keyframes wave-left {
   0% {
     transform: translateX(0);
   }
@@ -306,3 +306,5 @@ html {
       animation: wave-right 30s linear infinite;
       will-change: transform;
     }
+  }
+} */
