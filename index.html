@@ -61,10 +61,21 @@
     <div class="stars3 absolute inset-0"></div>
   </div>
 
+<<<<<<< HEAD
   <!-- Floating Flower Petals Container -->
   <div class="petals-container fixed inset-0 pointer-events-none z-10">
     <!-- Petals akan di-generate oleh JavaScript -->
   </div>
+=======
+      <!-- Desktop Navigation Links -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-clr-primary transition-colors duration-200">Home</a></li>
+        <li><a href="#mempelai" class="hover:text-clr-primary transition-colors duration-200">Mempelai</a></li>
+        <li><a href="#date" class="hover:text-clr-primary transition-colors duration-200">Tanggal</a></li>
+        <li><a href="#location" class="hover:text-clr-primary transition-colors duration-200">Lokasi</a></li>
+        <li><a href="#rsvp" class="hover:text-clr-primary transition-colors duration-200">Ucapan</a></li>
+      </ul>
+>>>>>>> 51892e700653c4c086950287b43a3b7c8638a5b5
 
   <!-- Main Content Container -->
   <div class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8">
@@ -80,11 +91,37 @@
         Sugeng & Shofia
       </h2>
 
+<<<<<<< HEAD
       <!-- Decorative Divider -->
       <div class="flex items-center justify-center space-x-4 text-wedding-gold">
         <div class="w-12 h-px bg-gradient-to-r from-transparent to-wedding-gold"></div>
         <i class="fas fa-heart text-xl animate-twinkle"></i>
         <div class="w-12 h-px bg-gradient-to-l from-transparent to-wedding-gold"></div>
+=======
+      <!-- Foreground Image (bg4.png - Couple) -->
+      <img src="img/couple.png" alt="background" id="couple" class="absolute w-full h-full object-cover z-40">
+    </div>
+    <!-- Overlay untuk membuat teks lebih terbaca -->
+    <div class="absolute inset-0 bg-black opacity-35"></div>
+
+    <!-- Konten Hero -->
+    <div class="relative z-10 p-4 max-w-4xl -top-10 md:top-10">
+      <!-- Nama Pengantin dengan font script -->
+      <h1 id ="home" class="font-scriptAccent text-h1-size mb-4 tracking-wide" data-aos="fade-down" data-aos-delay="100">
+        Sugeng &amp; Shofia 
+      </h1>
+
+      <!-- Tanggal Pernikahan -->
+      <p class="text-lg md:text-xl mb-8 font-light" data-aos="fade-up" data-aos-delay="250">
+        Sabtu, 23 Agustus 2025
+      </p>
+
+      <!-- Countdown Timer -->
+      <div id="countdown"
+        class="text-xl md:text-2xl font-bold mb-8 bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-sm"
+        data-aos="zoom-in" data-aos-delay="400">
+        <!-- Countdown akan diisi oleh JavaScript -->
+>>>>>>> 51892e700653c4c086950287b43a3b7c8638a5b5
       </div>
     </header>
 
@@ -96,6 +133,7 @@
           Konfirmasi Kehadiran Anda
         </h4>
 
+<<<<<<< HEAD
         <!-- Confirmation Form -->
         <form id="confirmationForm" class="space-y-6">
           <!-- Nama Field (Wajib) -->
@@ -103,6 +141,600 @@
             <label for="nama" class="flex items-center space-x-2 text-sm font-medium text-gray-700">
               <i class="fas fa-user text-wedding-rose"></i>
               <span>Nama Lengkap *</span>
+=======
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Couple Section -->
+  <section id="couple" class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30 md:top-10">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8 mt-8 pt-24">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="font-headingSerif text-h2-size text-clr-primary mb-4">
+          Mempelai
+        </h2>
+        <h3 id="mempelai" class="font-headingSerif text-h3-size text-clr-primary mb-3">
+          بسم الله <br><br>
+          السلام عليكم ورحمة الله وبركاته</h3>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto pt-12">
+          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri
+          acara pernikahan kami.
+        </p>
+      </div>
+
+      <!-- Couple Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+
+        <!-- Bride - Mempelai Wanita -->
+        <div class="text-center order-1 lg:order-1" data-aos="fade-right" data-aos-delay="200">
+          <!-- Foto Mempelai Wanita - Ganti dengan foto yang sesuai -->
+          <div class="relative mb-6">
+            <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
+              <img src="img/shf.jpg" alt="Shofia"
+                class="w-full h-full object-cover bg-gradient-to-br from-pink-200 to-pink-300">
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -top-4 -right-4 w-8 h-8 bg-clr-primary rounded-full opacity-20"></div>
+            <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-clr-accent rounded-full opacity-30"></div>
+          </div>
+
+          <!-- Info Mempelai Wanita -->
+          <div class="space-y-3">
+            <h3 class="font-headingSerif text-2xl lg:text-3xl text-clr-primary font-bold">
+              Mempelai Wanita
+            </h3>
+            <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
+              <div id="#reveal-inOut"> Shofia Salsabila</div>
+            </h4>
+            <div class="text-gray-600 leading-relaxed">
+              <p class="mb-2">Putri pertama dari</p>
+              <p class="font-semibold">Bapak Ahmad Mufarihun &amp; Ibu Uswatun Khasanah</p>
+              <p class="text-sm mt-2 italic">
+                <!-- Tambahkan informasi tambahan jika diperlukan -->
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative Divider - Hanya tampil di desktop -->
+        <div class="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+          <div class="bg-white rounded-full p-4 shadow-lg">
+            <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Groom - Mempelai Pria -->
+        <div class="text-center order-2 lg:order-2" data-aos="fade-left" data-aos-delay="400">
+          <!-- Foto Mempelai Pria - Ganti dengan foto yang sesuai -->
+          <div class="relative mb-6">
+            <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
+              <img src="img/pp1.jpg" alt="Sugeng"
+                class="w-full h-full object-cover bg-gradient-to-br from-blue-200 to-blue-300">
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -top-4 -left-4 w-8 h-8 bg-clr-primary rounded-full opacity-20"></div>
+            <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-clr-accent rounded-full opacity-30"></div>
+          </div>
+
+          <!-- Info Mempelai Pria -->
+          <div class="space-y-3">
+            <h3 class="font-headingSerif text-2xl lg:text-3xl text-clr-primary font-bold">
+              Mempelai Pria
+            </h3>
+            <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
+              Sugeng Saputra 
+            </h4>
+            <div class="text-gray-600 leading-relaxed">
+              <p class="mb-2">Putra ketiga dari</p>
+              <p id="reveal-inOut-layar-kecil" class="font-semibold">Bapak Suparlan & Ibu Sriami</p>
+              <!-- revealin-Out layar kecil  -->
+              <p class="text-sm mt-2 italic">
+                <!-- Tambahkan informasi tambahan jika diperlukan -->
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Quote atau Ayat -->
+      <div class="deep-in text-center mb-4">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+          <p id="quote-text" class="font-scriptAccent text-xl lg:text-2xl text-clr-primary mb-4 italic">
+            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri,
+            supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."
+          </p>
+          <p id="verse-text" class="text-sm text-gray-600 font-semibold">
+            QS. Ar-Rum: 21
+          </p>
+        </div>
+      </div><!-- tutup quote -->
+    </div>
+  </section>
+  <!-- Date Section -->
+  <section id="date"
+    class="py-section-y relative pb-[150px] block overflow-hidden bg-cover bg-center bg-gradient-to-br from-pink-50 to-pink-100"
+    style="background-image: url('/img/pattern7.jpg');">
+
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+
+    <div class="container mx-auto px-4 text-center relative z-10 pt-24">
+      <!-- Section Title -->
+      <div class="mb-12">
+        <h2 class="font-headingSerif text-h2-size text-clr-primary mb-4" data-aos="fade-up">
+          Tanggal Penting
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dalam momen istimewa kami
+        </p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Timeline Line - Hidden on mobile -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-24 w-1 bg-clr-primary transform -translate-x-1/2">
+        </div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-8 md:space-y-8">
+
+          <!-- Akad Nikah -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="200">
+            <!-- Timeline Dot -->
+            <div
+              class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+            </div>
+
+            <!-- Content Card -->
+            <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative">
+              <!-- Mobile Timeline Dot -->
+              <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
+
+              <!-- Event Icon -->
+              <div class="flex justify-center mb-4">
+                <div class="w-16 h-16 bg-clr-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                  <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Event Details -->
+              <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+                Akad Nikah
+              </h3>
+              <div class="space-y-2 text-gray-600">
+                <p class="text-xl font-semibold text-clr-dark">
+                  Sabtu, 23 Agustus 2025
+                </p>
+                <p class="text-lg">
+                  09.00 WIB
+                </p>
+                <div class="flex items-center justify-center mt-4">
+                  <svg class="w-5 h-5 text-clr-primary mr-2" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="font-semibold">Rumah mempelai wanita</span>
+                </div>
+                <p class="text-sm mt-2 italic">
+                  <!-- Tambahkan alamat lengkap jika diperlukan -->
+                  Jl.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resepsi -->
+          <div class="relative" data-aos="fade-up" data-aos-delay="350">
+            <!-- Timeline Dot -->
+            <div
+              class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+            </div>
+
+            <!-- Content Card -->
+            <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 relative">
+              <!-- Mobile Timeline Dot -->
+              <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
+
+              <!-- Event Icon -->
+              <div class="flex justify-center mb-4">
+                <div class="w-16 h-16 bg-clr-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                  <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Event Details -->
+              <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+                Resepsi
+              </h3>
+              <div class="space-y-2 text-gray-600">
+                <p class="text-xl font-semibold text-clr-dark">
+                  Sabtu, 23 Agustus 2025
+                </p>
+                <p class="text-lg">
+                  11.00 - 14.00 WIB
+                </p>
+                <div class="flex items-center justify-center mt-4">
+                  <svg class="w-5 h-5 text-clr-primary mr-2" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="font-semibold">Rumah mempelai wanita</span>
+                </div>
+                <p class="text-sm mt-2 italic">
+                  <!-- Tambahkan alamat lengkap jika diperlukan -->
+                  Jl.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add to Calendar Button -->
+        <div class="mt-12 mx-auto justify-center items-center text-center" data-aos="zoom-in" data-aos-delay="500">
+          <button id="add-to-calendar" class="btn-primary inline-flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-clr-primary">Simpan ke Kalender</span>
+          </button>
+          <p class="text-sm text-gray-500 mt-2">
+            Klik untuk menambahkan ke Google Calendar Anda
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Container -->
+  <section
+    class="relative overflow-x-hidden quotes pt-12 top-4 h-[1150px] bg-[url('img/bg3d2.gif')] bg-cover bg-center bg-no-repeat opacity-80 -z-10"
+    id="quotes">
+    <h2 class="font-headingSerif text-h2-size text-clr-primary mb-4 text-center" data-aos="fade-up">
+      Quotes
+    </h2>
+    <div class="relative max-w-4xl mx-4">
+      <!-- Timeline Line - Hidden on mobile -->
+      <div class="hidden md:block absolute left-1/2 top-0 bottom-2 w-1 bg-clr-primary transform -translate-x-1/2">
+      </div>
+
+      <!-- Timeline Items -->
+      <div class="space-y-16 md:space-y-20 z-50 pt-10">
+
+        <!-- menghilang ke kanan -->
+        <div class="relative slide-right1 will-change-transform">
+          <!-- Timeline Dot -->
+          <div
+            class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+          </div>
+          <!-- Content Card -->
+          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative">
+            <!-- Mobile Timeline Dot -->
+            <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
+
+
+            <!-- Event Details -->
+            <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+              Prioritas
+            </h3>
+            <div class="max-w-3xl space-y-2 text-gray-600 typing-text1">
+              <p class="text-sm font-semibold text-clr-dark">
+                Seorang istri dan anak adalah prioritas utama bagi suami dalam hal kasih sayang dan nafkah. Namun
+                dalam hal berbakti, seorang suami tetap memprioritaskan kedua orang tuanya.
+                Dan bagi seorang wanita yg telah menikah, maka Ia wajib memprioritaskan suaminya
+              </p>
+              <p class="text-sm mt-2 italic">
+                - S &amp; S
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- menghilang ke kiri-->
+        <div class="relative slide-left1 will-change-transform">
+          <!-- Timeline Dot -->
+          <div
+            class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+          </div>
+
+          <!-- Content Card -->
+          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 relative">
+            <!-- Mobile Timeline Dot -->
+            <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
+
+
+            <!-- Event Details -->
+            <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+              Pakaian
+            </h3>
+            <div class="space-y-2 text-gray-600 typing-text2">
+              <p class="text-sm font-semibold text-clr-dark">
+                Seorang suami dan istri adalah pakaian bagi masing-masing. Oleh karena itu mereka harus saling
+                menutupi kekurangan masing-masing dan tidak boleh menampakkan kekurangan di antara mereka pada orang
+                lain, siapapun itu
+              </p>
+              <p class="text-sm mt-2 italic">
+                <!-- Tambahkan alamat lengkap jika diperlukan -->
+                - S &amp; S
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- menghilang ke kanan -->
+        <div class="relative slide-right2 top-8 will-change-transform">
+          <!-- Tambahkan alamat lengkap jika diperlukan -->
+
+          <!-- Timeline Dot -->
+          <div
+            class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+          </div>
+
+          <!-- Content Card -->
+          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative bottom-8">
+            <!-- Mobile Timeline Dot -->
+            <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
+
+
+            <!-- Event Details -->
+            <h3 id="prioritas-layar-kecil" class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+              <!-- efek slide-kanan layar kecil -->
+
+              Cerminan Diri
+            </h3>
+            <div class="space-y-2 text-gray-600 typing-text3">
+              <p class="text-sm font-semibold text-clr-dark">
+                Jodoh adalah cerminan diri. Alangkah beruntungnya mereka yg saling melengkapi dan mencintai karena
+                Allah
+              </p>
+              <p class="text-sm mt-2 italic">
+                <!-- Tambahkan alamat lengkap jika diperlukan -->
+                - S &amp; S
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Location Section -->
+  <section id="location" class="py-section-y bg-white pt-8 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 id="pakaian-layar-kecil" class="font-headingSerif text-h2-size text-clr-primary mb-4" data-aos="fade-up">
+          <!-- efek slide-kiri layar kecil -->
+
+          <div id="typing-text-location"> Lokasi Acara </div> <!-- efek typing-text layar besar -->
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Temukan lokasi acara pernikahan kami dengan mudah melalui peta di bawah ini
+        </p>
+      </div>
+
+      <!-- Location Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+
+        <!-- Akad Nikah Location -->
+        <div class="bg-gradient-to-br from-clr-base to-clr-accent rounded-lg p-8 shadow-lg" data-aos="fade-right"
+          data-aos-delay="200">
+          <div class="text-center">
+            <!-- Location Icon -->
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Location Details -->
+            <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+              Akad Nikah
+            </h3>
+            <h4 id="typing-text-akad-nikah" class="text-xl font-semibold text-clr-dark mb-2">
+              <!-- efek text-typing layar besar -->
+              Rumah mempelai wanita
+            </h4>
+            <p id="cermin-layar-kecil" class="text-gray-600 mb-4"><!-- efek slide-kanan layar kecil -->
+
+              <!-- Ganti dengan alamat lengkap -->
+              Jl. <br>
+              [Kota, Kode Pos]
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="space-y-2">
+              <button
+                class="w-full bg-white text-clr-primary px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200">
+                Buka di Google Maps
+              </button>
+              <button
+                class="w-full bg-clr-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-200">
+                Petunjuk Arah
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resepsi Location -->
+        <div class="bg-gradient-to-br from-clr-base to-clr-accent rounded-lg p-8 shadow-lg" data-aos="fade-left"
+          data-aos-delay="400">
+          <div class="text-center">
+            <!-- Location Icon -->
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+                <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Location Details -->
+            <h3 id="resepsi" class="font-headingSerif text-2xl text-clr-primary font-bold mb-3">
+              <!-- efek slide kanan layar besar -->
+              Resepsi
+            </h3>
+            <h4 class="text-xl font-semibold text-clr-dark mb-2">
+              Rumah mempelai wanita
+            </h4>
+            <p id="typing-text-resepsi" class="text-gray-600 mb-4"> <!-- efek text-typing layar besar -->
+              <!-- Ganti dengan alamat lengkap -->
+              Jl. <br>
+              [Kota, Kode Pos]
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="space-y-2">
+              <button
+                class="w-full bg-white text-clr-primary px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200">
+                Buka di Google Maps
+              </button>
+              <button
+                class="w-full bg-clr-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-200">
+                <div id="pakaian"> Petunjuk Arah</div> <!-- efek slide-kiri layar besar -->
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Embedded Map -->
+      <div id="cermin" class="bg-gray-100 rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
+        <!-- efek slide-kanan layar besar -->
+        <!-- Map Container -->
+        <div class="relative" style="height: 450px;">
+          <!-- Placeholder untuk Google Maps Embed -->
+          <!-- Ganti src dengan URL embed Google Maps yang sesuai -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.1753924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sMonas!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+          </iframe>
+
+          <!-- Map Overlay dengan informasi -->
+          <div class="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-xs">
+            <h4 class="font-semibold text-clr-primary mb-2">Lokasi Acara</h4>
+            <p class="text-sm text-gray-600">
+              Klik pada marker di peta untuk melihat detail lokasi dan mendapatkan petunjuk arah.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Information -->
+      <div class="mt-10 text-center" data-aos="fade-up" data-aos-delay="800">
+        <div class="bg-clr-base rounded-lg p-6 max-w-2xl mx-auto">
+          <h4 class="font-headingSerif text-xl text-clr-primary font-bold mb-3">
+            Informasi Tambahan
+          </h4>
+          <div class="text-gray-600 space-y-2">
+            <p>
+              <strong>Parkir:</strong> Tersedia area parkir yang luas di kedua lokasi
+            </p>
+            <p>
+              <strong>Transportasi:</strong> Dapat diakses dengan kendaraan pribadi dan transportasi umum
+            </p>
+            <p>
+              <strong>Kontak:</strong> Hubungi [Nomor Telepon] untuk informasi lebih lanjut
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section id="rsvp"
+    class="py-section-y relative overflow-hidden bg-cover bg-center text-white bg-gradient-to-br from-clr-primary to-pink-600 top-8"
+    style="background-image: url('/img/rsvp-bg.jpg');">
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="font-headingSerif text-h2-size text-white mb-4" data-aos="fade-up">
+          Konfirmasi Kehadiran
+        </h2>
+        <p class="text-lg text-gray-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Kehadiran dan doa restu dari Bapak/Ibu/Saudara/i merupakan kebahagiaan bagi kami
+        </p>
+      </div>
+
+      <!-- RSVP Form -->
+      <div class="max-w-2xl mx-auto">
+        <form action="https://docs.google.com/forms/d/e/[FORM_ID]/formResponse" method="POST"
+          class="bg-white rounded-lg shadow-2xl p-8 text-clr-text" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Form Header -->
+          <div class="text-center mb-8">
+            <div
+              class="relative w-16 h-16 bg-clr-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg width="64px" height="64px" viewBox="-11.44 -11.44 74.88 74.88" xmlns="http://www.w3.org/2000/svg"
+                fill="#ff1f1f" stroke="#ff1f1f" stroke-width="1.5079999999999998">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <rect fill="none" height="4.8" rx="1.6" width="27.2" x="12.4" y="26"></rect>
+                  <rect fill="none" height="4.8" rx="1.6" width="24" x="12.4" y="35.6"></rect>
+                  <g>
+                    <path
+                      d="m36.4 14.8h8.48a1.09 1.09 0 0 0 1.12-1.12 1 1 0 0 0 -.32-.8l-10.56-10.56a1 1 0 0 0 -.8-.32 1.09 1.09 0 0 0 -1.12 1.12v8.48a3.21 3.21 0 0 0 3.2 3.2z">
+                    </path>
+                    <path
+                      d="m44.4 19.6h-11.2a4.81 4.81 0 0 1 -4.8-4.8v-11.2a1.6 1.6 0 0 0 -1.6-1.6h-16a4.81 4.81 0 0 0 -4.8 4.8v38.4a4.81 4.81 0 0 0 4.8 4.8h30.4a4.81 4.81 0 0 0 4.8-4.8v-24a1.6 1.6 0 0 0 -1.6-1.6zm-32-1.6a1.62 1.62 0 0 1 1.6-1.55h6.55a1.56 1.56 0 0 1 1.57 1.55v1.59a1.63 1.63 0 0 1 -1.59 1.58h-6.53a1.55 1.55 0 0 1 -1.58-1.58zm24 20.77a1.6 1.6 0 0 1 -1.6 1.6h-20.8a1.6 1.6 0 0 1 -1.6-1.6v-1.57a1.6 1.6 0 0 1 1.6-1.6h20.8a1.6 1.6 0 0 1 1.6 1.6zm3.2-9.6a1.6 1.6 0 0 1 -1.6 1.63h-24a1.6 1.6 0 0 1 -1.6-1.6v-1.6a1.6 1.6 0 0 1 1.6-1.6h24a1.6 1.6 0 0 1 1.6 1.6z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-2">
+              Form Konfirmasi
+            </h3>
+            <p class="text-gray-600">
+              Mohon isi form di bawah ini untuk konfirmasi kehadiran Anda
+            </p>
+          </div>
+
+          <!-- Nama Field -->
+          <div class="mb-6" data-aos="fade-up" data-aos-delay="300">
+            <label for="name" class="block text-sm font-bold text-clr-dark mb-2">
+              Nama Lengkap <span class="text-red-500">*</span>
+>>>>>>> 51892e700653c4c086950287b43a3b7c8638a5b5
             </label>
             <input type="text" id="nama" name="nama"
               class="w-full px-4 py-3 bg-white/50 border border-white/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500"
