@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 /* Custom CSS */
+.bg-lokasi {
+  background-color: #404040 !important;
+}
 
 /* Button Primary */
 .btn-primary {

@@ -27,7 +27,8 @@
             "body-size": "1rem",
           },
           colors: {
-            "wedding-pink": "#f8d7da", "wedding-rose": "#e91e63",
+            "wedding-pink": "#f8d7da",
+            "wedding-rose": "#e91e63",
             "wedding-gold": "#ffd700",
             "wedding-cream": "#faf7f2",
             "wedding-sage": "#9caf88",
@@ -244,7 +245,7 @@
     class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500 transform dark:bg-[#1a1a1a] dark:text-white">
     <div class="container mx-auto flex justify-between items-center h-24 px-4">
       <!-- Logo -->
-      <div class="text-2xl font-scriptAccent text-clr-primary">Sugeng &amp; Shofia</div>
+      <div class="text-2xl font-scriptAccent text-clr-primary">Fulan & Fulanah</div>
 
       <!-- Desktop Navigation Links -->
       <ul class="hidden md:flex space-x-6">
@@ -269,7 +270,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden bg-white shadow-lg w-full hidden">
+    <div id="mobile-menu" class="md:hidden bg-white shadow-lg w-full hidden dark:bg-[#1a1a1a] dark:text-white">
       <ul class="flex flex-col items-center py-4 space-y-2">
         <li><a href="#hero" class="block py-2 px-4 hover:text-clr-primary transition-colors duration-200">Home</a></li>
         <li><a href="#couple" class="block py-2 px-4 hover:text-clr-primary transition-colors duration-200">Mempelai</a>
@@ -303,7 +304,7 @@
     <div class="relative z-10 p-4 max-w-4xl -top-10 md:top-10">
       <!-- Nama Pengantin dengan font script -->
       <h1 class="font-scriptAccent text-h1-size mb-4 tracking-wide" data-aos="fade-down" data-aos-delay="100">
-        Sugeng &amp; Shofia
+        Fulan &amp; Fulanah
       </h1>
 
       <!-- Tanggal Pernikahan -->
@@ -320,6 +321,11 @@
 
       <!-- Call to Action Button -->
     </div>
+    <button id="darkModeToggle"
+      class="z-50 p-3 fixed rounded-full w-[40px] h-[100px] md:w-[80px] md:h-[150px] bg-white/30 border-white/30 dark:bg-black/70 shadow-md text-black dark:text-white transition">
+      <i class="fas fa-moon block dark:hidden"></i>
+      <i class="fas fa-sun hidden dark:block"></i>
+    </button>
 
     <!-- Scroll Indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -331,12 +337,8 @@
   </section>
 
   <!-- Couple Section -->
-<<<<<<< HEAD
   <section id="couple"
     class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30 dark:bg-[#1a1a1a] dark:text-white">
-=======
-  <section id="couple" class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30 md:top-10">
->>>>>>> 716da48e55fcdc6005d455861f2a46fb50acf718
     <div class="container mx-auto px-4 md:px-6 lg:px-8 mt-8 pt-24">
       <!-- Section Title -->
       <div class="text-center mb-12">
@@ -357,7 +359,7 @@
           <!-- Foto Mempelai Wanita - Ganti dengan foto yang sesuai -->
           <div class="relative mb-6">
             <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img src="../img/shf.jpg" alt="Shofia"
+              <img src="../img/shf.jpg" alt="Fulanah"
                 class="w-full h-full object-cover bg-gradient-to-br from-pink-200 to-pink-300">
             </div>
             <!-- Decorative elements -->
@@ -366,16 +368,16 @@
           </div>
 
           <!-- Info Mempelai Wanita -->
-          <div class="space-y-3">
+          <div class="space-y-3 dark:bg-[#1a1a1a] dark:text-white">
             <h3 class="font-headingSerif text-2xl lg:text-3xl text-clr-primary font-bold">
               Mempelai Wanita
             </h3>
             <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
-              <div id="#reveal-inOut"> Shofia Salsabila</div>
+              <div id="#reveal-inOut"> Fulanah + </div>
             </h4>
             <div class="text-gray-600 leading-relaxed">
               <p class="mb-2">Putri pertama dari</p>
-              <p class="font-semibold">Bapak Ahmad Mufarihun &amp; Ibu Uswatun Khasanah</p>
+              <p class="font-semibold">Bapak Fulan + & Ibu Fulanah +</p>
               <p class="text-sm mt-2 italic">
                 <!-- Tambahkan informasi tambahan jika diperlukan -->
               </p>
@@ -400,7 +402,7 @@
           <!-- Foto Mempelai Pria - Ganti dengan foto yang sesuai -->
           <div class="relative mb-6">
             <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img src="../img/pp1.jpg" alt="Sugeng"
+              <img src="../img/pp1.jpg" alt="Fulansaputra"
                 class="w-full h-full object-cover bg-gradient-to-br from-blue-200 to-blue-300">
             </div>
             <!-- Decorative elements -->
@@ -414,11 +416,11 @@
               Mempelai Pria
             </h3>
             <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
-              Sugeng Saputra
+              Fulan +
             </h4>
             <div class="text-gray-600 leading-relaxed">
               <p class="mb-2">Putra ketiga dari</p>
-              <p id="reveal-inOut-layar-kecil" class="font-semibold">Bapak Suparlan & Ibu Sriami</p>
+              <p id="reveal-inOut-layar-kecil" class="font-semibold">Bapak Fulan & Ibu Fulanah</p>
               <!-- revealin-Out layar kecil  -->
               <p class="text-sm mt-2 italic">
                 <!-- Tambahkan informasi tambahan jika diperlukan -->
@@ -430,7 +432,7 @@
       </div>
       <!-- Quote atau Ayat -->
       <div class="deep-in text-center mb-4">
-        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 dark:bg-[#404040] dark:text-white">
           <p id="quote-text" class="font-scriptAccent text-xl lg:text-2xl text-clr-primary mb-4 italic">
             "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri,
             supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."
@@ -448,7 +450,7 @@
     style="background-image: url('../img/pattern7.jpg');">
 
     <!-- Background Overlay -->
-    <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+    <div class="absolute inset-0 bg-white bg-opacity-80 dark:text-white dark:bg-[#404040] dark:text-white"></div>
 
     <div class="container mx-auto px-4 text-center relative z-10 pt-24">
       <!-- Section Title -->
@@ -474,7 +476,7 @@
           <div class="relative" data-aos="fade-up" data-aos-delay="200">
             <!-- Timeline Dot -->
             <div
-              class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+              class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white dark:border-black dark:text-white shadow-lg z-10">
             </div>
 
             <!-- Content Card -->
@@ -595,7 +597,7 @@
 
   <!-- Timeline Container -->
   <section
-    class="relative overflow-x-hidden quotes pt-12 top-4 h-[1150px] bg-[url('../img/bg3d2.gif')] bg-cover bg-center bg-no-repeat opacity-80 -z-10"
+    class="relative overflow-x-hidden quotes pt-12 top-4 h-[1150px] bg-[url('../img/bg3d2.gif')] bg-cover bg-center bg-no-repeat opacity-80 -z-10 dark:bg-[#1a1a1a] dark:text-white"
     id="quotes">
     <h2 class="font-headingSerif text-h2-size text-clr-primary mb-4 text-center" data-aos="fade-up">
       Quotes
@@ -615,7 +617,8 @@
             class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
           </div>
           <!-- Content Card -->
-          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative">
+          <div
+            class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative dark:bg-[#1a1a1a] dark:text-white">
             <!-- Mobile Timeline Dot -->
             <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
 
@@ -625,7 +628,7 @@
               Prioritas
             </h3>
             <div class="max-w-3xl space-y-2 text-gray-600 typing-text1">
-              <p class="text-sm font-semibold text-clr-dark">
+              <p class="text-sm font-semibold text-clr-dark dark:text-white">
                 Seorang istri dan anak adalah prioritas utama bagi suami dalam hal kasih sayang dan nafkah. Namun
                 dalam hal berbakti, seorang suami tetap memprioritaskan kedua orang tuanya.
                 Dan bagi seorang wanita yg telah menikah, maka Ia wajib memprioritaskan suaminya
@@ -641,11 +644,11 @@
         <div class="relative slide-left1 will-change-transform">
           <!-- Timeline Dot -->
           <div
-            class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10">
+            class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-clr-primary rounded-full transform -translate-x-1/2 border-4 border-white shadow-lg z-10 dark:bg-[#1a1a1a] dark:text-white">
           </div>
 
           <!-- Content Card -->
-          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 relative">
+          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 relative dark:bg-[#1a1a1a] dark:text-white">
             <!-- Mobile Timeline Dot -->
             <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
 
@@ -655,7 +658,7 @@
               Pakaian
             </h3>
             <div class="space-y-2 text-gray-600 typing-text2">
-              <p class="text-sm font-semibold text-clr-dark">
+              <p class="text-sm font-semibold text-clr-dark dark:text-white">
                 Seorang suami dan istri adalah pakaian bagi masing-masing. Oleh karena itu mereka harus saling
                 menutupi kekurangan masing-masing dan tidak boleh menampakkan kekurangan di antara mereka pada orang
                 lain, siapapun itu
@@ -677,7 +680,8 @@
           </div>
 
           <!-- Content Card -->
-          <div class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative bottom-8">
+          <div
+            class="bg-white rounded-lg shadow-lg p-8 md:w-5/12 md:ml-auto relative bottom-8 dark:bg-[#1a1a1a] dark:text-white">
             <!-- Mobile Timeline Dot -->
             <div class="md:hidden w-4 h-4 bg-clr-primary rounded-full absolute -left-2 top-8"></div>
 
@@ -689,7 +693,7 @@
               Cerminan Diri
             </h3>
             <div class="space-y-2 text-gray-600 typing-text3">
-              <p class="text-sm font-semibold text-clr-dark">
+              <p class="text-sm font-semibold text-clr-dark dark:text-white">
                 Jodoh adalah cerminan diri. Alangkah beruntungnya mereka yg saling melengkapi dan mencintai karena
                 Allah
               </p>
@@ -706,8 +710,8 @@
 
 
   <!-- Location Section -->
-  <section id="location" class="py-section-y bg-white pt-8 overflow-hidden">
-    <div class="container mx-auto px-4">
+  <section id="location" class="py-section-y pt-8 overflow-hidden dark:bg-[#1a1a1a] dark:text-white">
+    <div class="container mx-auto px-4 dark:bg-[#1a1a1a] dark:text-white">
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 id="pakaian-layar-kecil" class="font-headingSerif text-h2-size text-clr-primary mb-4" data-aos="fade-up">
@@ -721,15 +725,17 @@
       </div>
 
       <!-- Location Cards -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 dark:bg-[#1a1a1a] dark:text-white">
 
         <!-- Akad Nikah Location -->
-        <div class="bg-gradient-to-br from-clr-base to-clr-accent rounded-lg p-8 shadow-lg" data-aos="fade-right"
-          data-aos-delay="200">
+        <div
+          class="bg-gradient-to-br from-clr-base to-clr-accent rounded-lg p-8 shadow-lg dark:bg-[#1a1a1a] dark:text-white"
+          data-aos="fade-right" data-aos-delay="200">
           <div class="text-center">
             <!-- Location Icon -->
             <div class="flex justify-center mb-4">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+              <div
+                class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md dark:bg-[#1a1a1a] dark:text-white">
                 <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
@@ -774,7 +780,8 @@
           <div class="text-center">
             <!-- Location Icon -->
             <div class="flex justify-center mb-4">
-              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+              <div
+                class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md dark:bg-[#404040] dark:text-white">
                 <svg class="w-8 h-8 text-clr-primary" fill="currentColor" viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -860,8 +867,8 @@
 
   <!-- RSVP Section -->
   <section id="rsvp"
-    class="py-section-y relative overflow-hidden bg-cover bg-center text-white bg-gradient-to-br from-clr-primary to-pink-600 top-8"
-    style="background-image: url('/img/rsvp-bg.jpg');">
+    class="py-section-y relative overflow-hidden bg-cover bg-center text-white bg-gradient-to-br from-clr-primary to-pink-600 top-8 dark:bg-[#1a1a1a] dark:text-white"
+    style="background-image: url('../img/rsvp-bg.jpg');">
     <!-- Background Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
 
@@ -869,17 +876,18 @@
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 class="font-headingSerif text-h2-size text-white mb-4" data-aos="fade-up">
-        Ucapan doa & restu
+          Konfirmasi Kehadiran
         </h2>
         <p class="text-lg text-gray-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-       Doa terbaik dan restu dari Bapak/Ibu/Saudara/i merupakan kebahagiaan dan harapan bagi kami
+          Kehadiran dan doa restu dari Bapak/Ibu/Saudara/i merupakan kebahagiaan bagi kami
         </p>
       </div>
 
       <!-- RSVP Form -->
       <div class="max-w-2xl mx-auto">
         <form action="https://docs.google.com/forms/d/e/[FORM_ID]/formResponse" method="POST"
-          class="bg-white rounded-lg shadow-2xl p-8 text-clr-text" data-aos="fade-up" data-aos-delay="200">
+          class="bg-white rounded-lg shadow-2xl p-8 text-clr-text dark:bg-[#404040] dark:text-white" data-aos="fade-up"
+          data-aos-delay="200">
 
           <!-- Form Header -->
           <div class="text-center mb-8">
@@ -904,35 +912,35 @@
               </svg>
             </div>
             <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-2">
-              Doa & Ucapan 
+              Form Konfirmasi
             </h3>
             <p class="text-gray-600">
-             Berikan doa & restu Anda 
+              Mohon isi form di bawah ini untuk konfirmasi kehadiran Anda
             </p>
           </div>
 
           <!-- Nama Field -->
-          <!-- <div class="mb-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="mb-6" data-aos="fade-up" data-aos-delay="300">
             <label for="name" class="block text-sm font-bold text-clr-dark mb-2">
               Nama Lengkap <span class="text-red-500">*</span>
             </label>
             <input type="text" id="name" name="entry.111"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200"
               placeholder="Masukkan nama lengkap Anda" required>
-          </div> -->
+          </div>
 
           <!-- Alamat Field -->
-          <!-- <div class="mb-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="mb-6" data-aos="fade-up" data-aos-delay="400">
             <label for="address" class="block text-sm font-bold text-clr-dark mb-2">
               Alamat
             </label>
             <input type="text" id="address" name="entry.222"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200"
               placeholder="Alamat (opsional)">
-          </div> -->
+          </div>
 
           <!-- Kehadiran Field -->
-         <!--  <div class="mb-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="mb-6" data-aos="fade-up" data-aos-delay="500">
             <label class="block text-sm font-bold text-clr-dark mb-3">
               Konfirmasi Kehadiran <span class="text-red-500">*</span>
             </label>
@@ -966,10 +974,10 @@
                 </span>
               </label>
             </div>
-          </div> -->
+          </div>
 
           <!-- Jumlah Tamu Field -->
-         <!-- <div class="mb-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="mb-6" data-aos="fade-up" data-aos-delay="600">
             <label for="guests" class="block text-sm font-bold text-clr-dark mb-2">
               Jumlah Tamu
             </label>
@@ -981,7 +989,7 @@
               <option value="4">4 orang</option>
               <option value="5+">5+ orang</option>
             </select>
-          </div> -->
+          </div>
 
           <!-- Ucapan Field -->
           <div class="mb-8" data-aos="fade-up" data-aos-delay="700">
@@ -1045,7 +1053,8 @@
   </section>
 
   <!-- Footer Section -->
-  <footer id="footer" class="py-12 bg-white text-center text-clr-text relative overflow-hidden">
+  <footer id="footer"
+    class="py-12 bg-white text-center text-clr-text relative overflow-hidden dark:bg-[#1a1a1a] dark:text-white">
     <div class="container mx-auto px-4">
       <!-- Footer Content -->
       <div class="max-w-4xl mx-auto">
@@ -1056,7 +1065,7 @@
           <!-- Wedding Couple Info -->
           <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
             <h3 class="font-scriptAccent text-2xl text-clr-primary mb-3">
-              Sugeng &amp; Shofia
+              Fulan &amp; Fulanah
             </h3>
             <p class="text-gray-600 mb-4">
               Sabtu, 23 Agustus 2025
@@ -1081,7 +1090,7 @@
                   class="text-gray-600 hover:text-clr-primary transition-colors duration-200">Tanggal</a></li>
               <li><a href="#location"
                   class="text-gray-600 hover:text-clr-primary transition-colors duration-200">Lokasi</a></li>
-              <li><a href="#rsvp" class="text-gray-600 hover:text-clr-primary transition-colors duration-200">Ucapan</a>
+              <li><a href="#rsvp" class="text-gray-600 hover:text-clr-primary transition-colors duration-200">RSVP</a>
               </li>
             </ul>
           </div>
@@ -1160,7 +1169,7 @@
         <div class="border-t border-gray-200 pt-6" data-aos="fade-up" data-aos-delay="1000">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-600 mb-4 md:mb-0">
-              © 2025 Sugeng &amp; Shofia • Design with ❤️
+              © 2025 Fulan &amp; Fulanah • Design with ❤️
             </p>
             <p class="text-sm text-gray-500">
               Made with love for our special day
@@ -1232,10 +1241,28 @@
       closeIcon.classList.toggle('hidden');
     });
   </script>
+  <!-- ===== Dark mode ===== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("darkModeToggle");
+      const html = document.documentElement;
+
+      // Set dark mode awal (jika tersimpan)
+      if (localStorage.getItem("mode") === "dark") {
+        html.classList.add("dark");
+      }
+
+      toggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        localStorage.setItem("mode", isDark ? "dark" : "light");
+      });
+    });
+  </script>
   <!-- Custom JavaScript -->
   <script src="../js/script-percobaan.js"></script>
-  <script src="../js/reveal.js" type="module"></script>
-  <script src="../js/khoshnus.js" type="module"></script>
+  <script src="../js/reveal.jsx" type="module"></script>
+  <script src="../js/khoshnus.jsx" type="module"></script>
 
   <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
   <script>

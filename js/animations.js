@@ -348,3 +348,4 @@ window.AnimationController = {
   initializeGSAPAnimations,
   adjustAnimationsForDevice,
 };
+//=== Dark mode - light ===
