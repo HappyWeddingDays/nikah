@@ -8,7 +8,12 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script>
+    // tailwind.config.js
+    module.exports = {
+      darkMode: "class", // atau 'media'
+    };
+  </script>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Sacramento:wght@400&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
@@ -22,10 +27,9 @@
 
   <!-- Custom CSS untuk animasi dan efek khusus -->
   <link rel="stylesheet" href="css/animations.css" />
-
-  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
+      darkMode: "class", // 👈 penting! aktifkan class mode
       theme: {
         extend: {
           fontFamily: {
@@ -39,6 +43,9 @@
             "wedding-gold": "#ffd700",
             "wedding-cream": "#faf7f2",
             "wedding-sage": "#9caf88",
+            dark: "#0a0a0a",
+            "dark-soft": "#1a1a1a",
+            "dark-muted": "#2e2e2e",
           },
           animation: {
             float: "float 6s ease-in-out infinite",
@@ -53,25 +60,31 @@
   </script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 overflow-x-hidden relative">
+<body
+  class="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 overflow-x-hidden relative bg-white text-black dark:bg-[#1a1a1a] dark:text-white">
   <!-- Background Stars Animation Container -->
   <div class="stars-container fixed inset-0 pointer-events-none z-0">
     <div class="stars absolute inset-0"></div>
     <div class="stars2 absolute inset-0"></div>
     <div class="stars3 absolute inset-0"></div>
   </div>
-
+  <button id="darkModeToggle"
+    class="fixed top-4 right-0 z-50 p-3 h-[80px] w-[40px] md:h-[100px] md:w-[50px] rounded-full bg-white/80 dark:bg-black/70 shadow-md text-black dark:text-white transition">
+    <i class="fas fa-moon dark:hidden"></i>
+    <i class="fas fa-sun hidden dark:inline"></i>
+  </button>
   <!-- Floating Flower Petals Container -->
   <div class="petals-container fixed inset-0 pointer-events-none z-10">
     <!-- Petals akan di-generate oleh JavaScript -->
   </div>
 
   <!-- Main Content Container -->
-  <div class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8">
+  <div
+    class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-white/50 dark:bg-black/30 dark:border-white/30">
     <!-- Header Section -->
     <header class="text-center mb-8 animate-fade-in">
       <!-- Heading Tamu Undangan (Font Formal) -->
-      <h3 class="font-playfair text-lg md:text-xl text-gray-700 mb-2 tracking-wide uppercase">
+      <h3 class="font-playfair text-lg md:text-xl text-gray-700 dark:text-white mb-2 tracking-wide uppercase">
         Tamu Undangan Pernikahan
       </h3>
 
@@ -90,19 +103,20 @@
 
     <!-- Form Section dengan Background Transparan -->
     <section class="w-full max-w-md mx-auto animate-slide-up">
-      <div class="backdrop-blur-md bg-white/20 border border-white/30 rounded-2xl shadow-2xl p-6 md:p-8">
+      <div
+        class="backdrop-blur-md bg-white/20 border border-white/30 rounded-2xl shadow-2xl p-6 md:p-8 bg-white/50 dark:bg-[#1a1a1a] text-black dark:text-white">
         <!-- Form Title -->
-        <h4 class="font-poppins text-xl md:text-2xl font-semibold text-gray-800 text-center mb-6">
+        <h4 class="font-poppins text-xl md:text-2xl font-semibold text-gray-800 dark:text-white text-center mb-6">
           Konfirmasi Kehadiran Anda
         </h4>
 
         <!-- Confirmation Form -->
-        <form id="confirmationForm" class="space-y-6">
+        <form id="confirmationForm" class="space-y-6 dark:text-white">
           <!-- Nama Field (Wajib) -->
           <div class="space-y-2">
             <label for="nama" class="flex items-center space-x-2 text-sm font-medium text-gray-700">
               <i class="fas fa-user text-wedding-rose"></i>
-              <span>Nama Lengkap *</span>
+              <span class="dark:text-white">Nama Lengkap *</span>
             </label>
             <input type="text" id="nama" name="nama"
               class="w-full px-4 py-3 bg-white/50 border border-white/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500"
@@ -114,7 +128,7 @@
           <div class="space-y-2">
             <label for="alamat" class="flex items-center space-x-2 text-sm font-medium text-gray-700">
               <i class="fas fa-map-marker-alt text-wedding-rose"></i>
-              <span>Alamat (Opsional)</span>
+              <span class="dark:text-white">Alamat (Opsional)</span>
             </label>
             <textarea id="alamat" name="alamat"
               class="w-full px-4 py-3 bg-white/50 border border-white/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500 resize-none"
@@ -125,7 +139,7 @@
           <div class="space-y-3">
             <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
               <i class="fas fa-calendar-check text-wedding-rose"></i>
-              <span>Konfirmasi Kehadiran *</span>
+              <span class="dark:text-white">Konfirmasi Kehadiran *</span>
             </label>
             <div class="space-y-3">
               <!-- Option: Hadir -->
@@ -137,7 +151,7 @@
                   <div class="w-2.5 h-2.5 bg-wedding-rose rounded-full opacity-0 transition-opacity duration-200"></div>
                 </div>
                 <i class="fas fa-check-circle text-green-500 text-lg"></i>
-                <span class="text-gray-700 font-medium">Ya, saya akan hadir</span>
+                <span class="text-gray-700 font-medium dark:text-white">Ya, saya akan hadir</span>
               </label>
 
               <!-- Option: Tidak Hadir -->
@@ -149,7 +163,7 @@
                   <div class="w-2.5 h-2.5 bg-wedding-rose rounded-full opacity-0 transition-opacity duration-200"></div>
                 </div>
                 <i class="fas fa-times-circle text-red-500 text-lg"></i>
-                <span class="text-gray-700 font-medium">Maaf, saya tidak dapat hadir</span>
+                <span class="text-gray-700 font-medium dark:text-white">Maaf, saya tidak dapat hadir</span>
               </label>
             </div>
           </div>
@@ -192,12 +206,34 @@
     <footer class="text-center mt-8 animate-fade-in">
       <p class="font-poppins text-gray-600 flex items-center justify-center space-x-2">
         <i class="fas fa-heart text-wedding-rose animate-twinkle"></i>
-        <span>Dengan cinta, Sugeng & Shofia</span>
+        <span class="dark:text-gray-300">Dengan cinta, Sugeng & Shofia</span>
         <i class="fas fa-heart text-wedding-rose animate-twinkle"></i>
       </p>
     </footer>
   </div>
 
+  <!-- Custom JavaScript -->
+  <script src="js/script-manus.js"></script>
+  <script src="js/form-handler.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("darkModeToggle");
+      const html = document.documentElement;
+
+      // Set dark mode awal (jika tersimpan)
+      if (localStorage.getItem("mode") === "dark") {
+        html.classList.add("dark");
+      }
+
+      toggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        localStorage.setItem("mode", isDark ? "dark" : "light");
+      });
+    });
+  </script>
   <!-- Custom JavaScript -->
   <script src="js/script-manus.js"></script>
   <script src="js/form-handler.js"></script>

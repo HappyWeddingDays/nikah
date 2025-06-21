@@ -1,20 +1,59 @@
 <!doctype html>
-<html lang="id" class="smooth overflow-x-hidden">
+<html lang="id" class="smooth overflow-x-hidden dark:bg-[#1a1a1a] dark:text-white">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Wedding of S &amp; S</title>
+  <title>The Wedding of Anya & Bima</title>
   <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: "class",
+      darkMode: "class", // 👈 penting! aktifkan class mode
+      theme: {
+        extend: {
+          fontFamily: {
+            sacramento: ["Sacramento", "cursive"],
+            playfair: ["Playfair Display", "serif"],
+            poppins: ["Poppins", "sans-serif"],
+            headingSerif: ['"Playfair Display"', "serif"],
+            bodySans: ["Poppins", "sans-serif"],
+            scriptAccent: ['"Dancing Script"', "cursive"],
+          },
+          fontSize: {
+            "h1-size": "clamp(2.2rem, 5vw, 3.8rem)",
+            "h2-size": "clamp(1.6rem, 4vw, 2.4rem)",
+            "body-size": "1rem",
+          },
+          colors: {
+            "wedding-pink": "#f8d7da", "wedding-rose": "#e91e63",
+            "wedding-gold": "#ffd700",
+            "wedding-cream": "#faf7f2",
+            "wedding-sage": "#9caf88",
+            "clr-base": "#f4dcd6",
+            "clr-accent": "#e7b5ad",
+            "clr-primary": "#d81b60",
+            "clr-primary-light": "#f8d3cc",
+            "clr-text": "#333333",
+            "clr-dark": "#111111",
+            dark: "#0a0a0a",
+            "dark-soft": "#1a1a1a",
+            "dark-muted": "#2e2e2e",
+          },
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            twinkle: "twinkle 2s ease-in-out infinite alternate",
+            "petal-fall": "petalFall 15s linear infinite",
+            "fade-in": "fadeIn 1s ease-in-out",
+            "slide-up": "slideUp 0.8s ease-out",
+          },
+        },
+      },
     };
   </script>
   <!-- Favicon & Meta -->
-  <link rel="icon" href="https://fav.farm/🥰" />
+  <link rel="icon" href="https://fav.farm/🛸" />
   <meta name="theme-color" content="#000000" />
 
   <!-- Dark Mode Storage Check -->
@@ -47,7 +86,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Custom Tailwind Config via CDN -->
-  <script>
+  <!--  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -72,11 +111,11 @@
         },
       },
     };
-  </script>
+</script> -->
   <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
   <!-- css text reveal-->
-  <link href="css/reveal.css" rel="stylesheet" />
+  <link href="../css/reveal.css" rel="stylesheet" />
 
   <style>
     /* Keyframes */
@@ -187,6 +226,10 @@
   </style>
 
   <!-- Google Fonts -->
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-...panjang..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -195,10 +238,11 @@
 </head>
 
 <body
-  class="font-bodySans text-clr-text leading-body bg-white dark:bg-black text-black dark:text-white snap-y snap-mandatory overflow-x-hidden">
+  class="font-bodySans text-clr-text leading-body bg-white dark:bg-[#1a1a1a] text-black dark:text-white snap-y snap-mandatory overflow-x-hidden">
   <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500 transform">
-    <div class="container mx-auto flex justify-between items-center h-16 px-4">
+  <nav id="navbar"
+    class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500 transform dark:bg-[#1a1a1a] dark:text-white">
+    <div class="container mx-auto flex justify-between items-center h-24 px-4">
       <!-- Logo -->
       <div class="text-2xl font-scriptAccent text-clr-primary">Sugeng &amp; Shofia</div>
 
@@ -240,7 +284,8 @@
     </div>
   </nav>
   <!-- Hero Section -->
-  <section id="hero" class="block h-screen flex items-center justify-center text-center text-white overflow-hidden">
+  <section id="hero"
+    class="block h-screen flex items-center justify-center text-center text-white overflow-hidden dark:bg-[#1a1a1a] dark:text-white">
     <div id="hero-section"
       class="absolute flex flex-col items-center justify-center w-screen h-screen overflow-hidden text-center snap-start overflow-hidden">
       <img src="img/langit.png" alt="planet" id="langit" class="absolute w-full h-[1600px] object-cover -z-2 top-0">
@@ -258,7 +303,7 @@
     <div class="relative z-10 p-4 max-w-4xl -top-10 md:top-10">
       <!-- Nama Pengantin dengan font script -->
       <h1 class="font-scriptAccent text-h1-size mb-4 tracking-wide" data-aos="fade-down" data-aos-delay="100">
-        Sugeng &amp; Shofia 
+        Sugeng &amp; Shofia
       </h1>
 
       <!-- Tanggal Pernikahan -->
@@ -286,7 +331,8 @@
   </section>
 
   <!-- Couple Section -->
-  <section id="couple" class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30">
+  <section id="couple"
+    class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30 dark:bg-[#1a1a1a] dark:text-white">
     <div class="container mx-auto px-4 md:px-6 lg:px-8 mt-8 pt-24">
       <!-- Section Title -->
       <div class="text-center mb-12">
@@ -364,7 +410,7 @@
               Mempelai Pria
             </h3>
             <h4 class="font-scriptAccent text-3xl lg:text-4xl text-clr-dark mb-2">
-              Sugeng Saputra 
+              Sugeng Saputra
             </h4>
             <div class="text-gray-600 leading-relaxed">
               <p class="mb-2">Putra ketiga dari</p>
@@ -1006,7 +1052,7 @@
           <!-- Wedding Couple Info -->
           <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
             <h3 class="font-scriptAccent text-2xl text-clr-primary mb-3">
-              Sugeng &amp; Shofia 
+              Sugeng &amp; Shofia
             </h3>
             <p class="text-gray-600 mb-4">
               Sabtu, 23 Agustus 2025
