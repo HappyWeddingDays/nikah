@@ -288,13 +288,13 @@
     class="block h-screen flex items-center justify-center text-center text-white overflow-hidden dark:bg-[#1a1a1a] dark:text-white">
     <div id="hero-section"
       class="absolute flex flex-col items-center justify-center w-screen h-screen overflow-hidden text-center snap-start overflow-hidden">
-      <img src="img/langit.png" alt="planet" id="langit" class="absolute w-full h-[1600px] object-cover -z-2 top-0">
+      <img src="../img/langit.png" alt="planet" id="langit" class="absolute w-full h-[1600px] object-cover -z-2 top-0">
       <!-- Planet Image (bg3.png - Moon) -->
-      <img src="img/bulan.png" alt="planet" id="bulan"
+      <img src="../img/bulan.png" alt="planet" id="bulan"
         class="absolute bottom-[60%] -translate-x-1/2 left-1/2 md:w-[700px] z-10">
 
       <!-- Foreground Image (bg4.png - Couple) -->
-      <img src="img/couple.png" alt="background" id="couple" class="absolute w-full h-full object-cover z-40">
+      <img src="../img/couple.png" alt="background" id="couple" class="absolute w-full h-full object-cover z-40">
     </div>
     <!-- Overlay untuk membuat teks lebih terbaca -->
     <div class="absolute inset-0 bg-black opacity-35"></div>
@@ -331,8 +331,12 @@
   </section>
 
   <!-- Couple Section -->
+<<<<<<< HEAD
   <section id="couple"
     class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30 dark:bg-[#1a1a1a] dark:text-white">
+=======
+  <section id="couple" class="relative block overflow-x-hidden py-section-y bg-clr-base relative z-30 md:top-10">
+>>>>>>> 716da48e55fcdc6005d455861f2a46fb50acf718
     <div class="container mx-auto px-4 md:px-6 lg:px-8 mt-8 pt-24">
       <!-- Section Title -->
       <div class="text-center mb-12">
@@ -353,7 +357,7 @@
           <!-- Foto Mempelai Wanita - Ganti dengan foto yang sesuai -->
           <div class="relative mb-6">
             <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img src="img/shf.jpg" alt="Shofia"
+              <img src="../img/shf.jpg" alt="Shofia"
                 class="w-full h-full object-cover bg-gradient-to-br from-pink-200 to-pink-300">
             </div>
             <!-- Decorative elements -->
@@ -396,7 +400,7 @@
           <!-- Foto Mempelai Pria - Ganti dengan foto yang sesuai -->
           <div class="relative mb-6">
             <div class="w-64 h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img src="img/pp1.jpg" alt="Sugeng"
+              <img src="../img/pp1.jpg" alt="Sugeng"
                 class="w-full h-full object-cover bg-gradient-to-br from-blue-200 to-blue-300">
             </div>
             <!-- Decorative elements -->
@@ -441,7 +445,7 @@
   <!-- Date Section -->
   <section id="date"
     class="py-section-y relative pb-[150px] block overflow-hidden bg-cover bg-center bg-gradient-to-br from-pink-50 to-pink-100"
-    style="background-image: url('/img/pattern7.jpg');">
+    style="background-image: url('../img/pattern7.jpg');">
 
     <!-- Background Overlay -->
     <div class="absolute inset-0 bg-white bg-opacity-80"></div>
@@ -591,7 +595,7 @@
 
   <!-- Timeline Container -->
   <section
-    class="relative overflow-x-hidden overflow-y-auto h-screen stickty top-0  quotes pt-12 top-4 h-[1150px] bg-[url('img/bg3d2.gif')] bg-cover bg-center bg-no-repeat opacity-80 -z-10"
+    class="relative overflow-x-hidden quotes pt-12 top-4 h-[1150px] bg-[url('../img/bg3d2.gif')] bg-cover bg-center bg-no-repeat opacity-80 -z-10"
     id="quotes">
     <h2 class="font-headingSerif text-h2-size text-clr-primary mb-4 text-center" data-aos="fade-up">
       Quotes
@@ -865,10 +869,10 @@
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 class="font-headingSerif text-h2-size text-white mb-4" data-aos="fade-up">
-          Konfirmasi Kehadiran
+        Ucapan doa & restu
         </h2>
         <p class="text-lg text-gray-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Kehadiran dan doa restu dari Bapak/Ibu/Saudara/i merupakan kebahagiaan bagi kami
+       Doa terbaik dan restu dari Bapak/Ibu/Saudara/i merupakan kebahagiaan dan harapan bagi kami
         </p>
       </div>
 
@@ -900,35 +904,35 @@
               </svg>
             </div>
             <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-2">
-              Form Konfirmasi
+              Doa & Ucapan 
             </h3>
             <p class="text-gray-600">
-              Mohon isi form di bawah ini untuk konfirmasi kehadiran Anda
+             Berikan doa & restu Anda 
             </p>
           </div>
 
           <!-- Nama Field -->
-          <div class="mb-6" data-aos="fade-up" data-aos-delay="300">
+          <!-- <div class="mb-6" data-aos="fade-up" data-aos-delay="300">
             <label for="name" class="block text-sm font-bold text-clr-dark mb-2">
               Nama Lengkap <span class="text-red-500">*</span>
             </label>
             <input type="text" id="name" name="entry.111"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200"
               placeholder="Masukkan nama lengkap Anda" required>
-          </div>
+          </div> -->
 
           <!-- Alamat Field -->
-          <div class="mb-6" data-aos="fade-up" data-aos-delay="400">
+          <!-- <div class="mb-6" data-aos="fade-up" data-aos-delay="400">
             <label for="address" class="block text-sm font-bold text-clr-dark mb-2">
               Alamat
             </label>
             <input type="text" id="address" name="entry.222"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200"
               placeholder="Alamat (opsional)">
-          </div>
+          </div> -->
 
           <!-- Kehadiran Field -->
-          <div class="mb-6" data-aos="fade-up" data-aos-delay="500">
+         <!--  <div class="mb-6" data-aos="fade-up" data-aos-delay="500">
             <label class="block text-sm font-bold text-clr-dark mb-3">
               Konfirmasi Kehadiran <span class="text-red-500">*</span>
             </label>
@@ -962,10 +966,10 @@
                 </span>
               </label>
             </div>
-          </div>
+          </div> -->
 
           <!-- Jumlah Tamu Field -->
-          <div class="mb-6" data-aos="fade-up" data-aos-delay="600">
+         <!-- <div class="mb-6" data-aos="fade-up" data-aos-delay="600">
             <label for="guests" class="block text-sm font-bold text-clr-dark mb-2">
               Jumlah Tamu
             </label>
@@ -977,7 +981,7 @@
               <option value="4">4 orang</option>
               <option value="5+">5+ orang</option>
             </select>
-          </div>
+          </div> -->
 
           <!-- Ucapan Field -->
           <div class="mb-8" data-aos="fade-up" data-aos-delay="700">
@@ -1077,7 +1081,7 @@
                   class="text-gray-600 hover:text-clr-primary transition-colors duration-200">Tanggal</a></li>
               <li><a href="#location"
                   class="text-gray-600 hover:text-clr-primary transition-colors duration-200">Lokasi</a></li>
-              <li><a href="#rsvp" class="text-gray-600 hover:text-clr-primary transition-colors duration-200">RSVP</a>
+              <li><a href="#rsvp" class="text-gray-600 hover:text-clr-primary transition-colors duration-200">Ucapan</a>
               </li>
             </ul>
           </div>
@@ -1189,7 +1193,7 @@
     <!-- Audio Element (Hidden) -->
     <!-- Ganti src dengan path file audio yang sebenarnya -->
     <audio id="background-audio" loop preload="auto">
-      <source src="audio/weddingNasheed.mp3" type="audio/mpeg">
+      <source src="../audio/weddingNasheed.mp3" type="audio/mpeg">
       <source src="/audio/background-music.ogg" type="audio/ogg">
       <!-- Fallback message -->
       Your browser does not support the audio element.
@@ -1205,7 +1209,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <!-- Gsap Custom -->
-  <script src="gsap/myGsap.js"></script>
+  <script src="../gsap/myGsap.js"></script>
   <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -1229,9 +1233,9 @@
     });
   </script>
   <!-- Custom JavaScript -->
-  <script src="js/script.js"></script>
-  <script src="js/reveal.js" type="module"></script>
-  <script src="js/khoshnus.js" type="module"></script>
+  <script src="../js/script-percobaan.js"></script>
+  <script src="../js/reveal.js" type="module"></script>
+  <script src="../js/khoshnus.js" type="module"></script>
 
   <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
   <script>
