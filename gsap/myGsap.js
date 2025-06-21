@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
           once: false,
           toggleActions: "play none none reverse",
           //scrub: true,
-          markers: true,
+          //markers: true,
           onEnter: () => {
             if (hasTyped) return;
             hasTyped = true;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
           start: "bottom bottom",
           once: false,
           toggleActions: "play none none reverse",
-          markers: true,
+          //markers: true,
           onEnter: () => {
             if (hasTyped) return;
             hasTyped = true;
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
           start: "bottom bottom",
           once: false,
           toggleActions: "play none none reverse",
-          markers: true,
+         // markers: true,
           onEnter: () => {
             if (hasTyped) return;
             hasTyped = true;
