@@ -847,6 +847,7 @@
   </section>
 
   <!-- RSVP Section -->
+<!-- RSVP Section -->
   <section id="rsvp"
     class="py-section-y relative overflow-hidden bg-cover bg-center text-white bg-gradient-to-br from-clr-primary to-pink-600 top-8 dark:bg-[#1a1a1a] dark:text-white"
     style="background-image: url('../img/rsvp-bg.jpg');">
@@ -857,23 +858,23 @@
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 class="font-headingSerif text-h2-size text-white mb-4" data-aos="fade-up">
-          Ucapan &amp; Doa
+          Konfirmasi Kehadiran
         </h2>
         <p class="text-lg text-gray-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Doa dan ucapan terbaik Anda sangat kami harapkan 
+          Kehadiran dan doa restu dari Bapak/Ibu/Saudara/i merupakan kebahagiaan bagi kami
         </p>
       </div>
 
       <!-- RSVP Form -->
       <div class="max-w-2xl mx-auto">
-        <form id="commentForm" action="https://docs.google.com/forms/d/e/[FORM_ID]/formResponse" method="POST"
+        <form action="https://docs.google.com/forms/d/e/[FORM_ID]/formResponse" method="POST" id="commentForm"
           class="bg-white rounded-lg shadow-2xl p-8 text-clr-text dark:bg-[#404040] dark:text-white" data-aos="fade-up"
           data-aos-delay="200">
 
           <!-- Form Header -->
           <div class="text-center mb-8">
             <div
-              class="relative w-16 h-16 bg-clr-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              class="relative w-16 h-16 bg-clr-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 dark:bg-[#1a1a1a] dark:text-white">
               <svg width="64px" height="64px" viewBox="-11.44 -11.44 74.88 74.88" xmlns="http://www.w3.org/2000/svg"
                 fill="#ff1f1f" stroke="#ff1f1f" stroke-width="1.5079999999999998">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -893,22 +894,26 @@
               </svg>
             </div>
             <h3 class="font-headingSerif text-2xl text-clr-primary font-bold mb-2">
-              Ucapan &amp; Doa
+              Sampaikan Sesuatu
             </h3>
             <p class="text-gray-600">
-              Sampaikan ucapan &amp; doa Anda
+              Sampaikan pendapat dan doa terbaik Anda
             </p>
           </div>
 
           <!-- Nama Field -->
-          <input type="text" id="nameInput" name="entry.111"
+          <div class="mb-6" data-aos="fade-up" data-aos-delay="300">
+            <label for="name" class="block text-sm font-bold text-clr-dark mb-2 dark:text-white">
+              Nama Lengkap <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="nameInput" name="entry.111"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200"
               placeholder="Masukkan nama lengkap Anda" required>
           </div>
 
           <!-- Alamat Field -->
           <div class="mb-6" data-aos="fade-up" data-aos-delay="400">
-            <label for="address" class="block text-sm font-bold text-clr-dark mb-2">
+            <label for="address" class="block text-sm font-bold text-clr-dark mb-2 dark:text-white">
               Alamat
             </label>
             <input type="text" id="addressInput" name="entry.222"
@@ -916,14 +921,15 @@
               placeholder="Alamat (opsional)">
           </div>
 
-          <!-- Ucapan Field -->
-          <div class="mb-8" data-aos="fade-up" data-aos-delay="700">
-            <label for="message" class="block text-sm font-bold text-clr-dark mb-2 dark:text-clr-dark">
 
+          <!-- Ucapan Field -->
+          <div class="mb-8 dark:text-white" data-aos="fade-up" data-aos-delay="700">
+            <label for="message" class="block text-sm font-bold text-clr-dark mb-2">
+              Ucapan Doa dan Komentar
             </label>
             <textarea id="messageInput" name="entry.444" rows="4"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200 resize-none dark:text-clr-dark"
-              placeholder="Tuliskan ucapan dan doa terbaik untuk kami..."></textarea>
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clr-primary focus:border-transparent transition-all duration-200 resize-none"
+              placeholder="Ucapkan sesuatu..."></textarea>
           </div>
 
           <!-- Submit Button -->
@@ -938,14 +944,14 @@
               <span>Kirim</span>
             </button>
             <p class="text-sm text-gray-500 mt-3">
-              Terima kasih atas partisipasi Anda
+              Terima kasih atas kunjungan Anda
             </p>
           </div>
         </form>
-       <!-- Daftar Komentar -->
-  <div id="listKomentar" class="mt-10 space-y-4">
-    <!-- Komentar dari Firebase akan muncul di sini -->
-  </div>
+        <!-- TEMPAT MENAMPILKAN KOMENTAR -->
+        <div id="listKomentar" class="mt-10 space-y-4">
+          <!-- Komentar dari Firebase akan muncul di sini -->
+        </div>
       </div>
 
       <!-- Contact Information -->
