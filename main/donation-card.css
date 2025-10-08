@@ -513,6 +513,17 @@
 }
 
 /* Custom Scrollbar */
+body {
+
+overflow-y: scroll; /* tetap bisa digulir secara vertikal */
+
+scrollbar-width: none; /* Firefox */ }
+
+/* Chrome, Edge, Safari */ 
+body::-webkit-scrollbar { 
+    display: none;
+  }
+    
 .card-content::-webkit-scrollbar {
     width: 4px;
 }
