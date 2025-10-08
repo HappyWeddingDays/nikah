@@ -92,6 +92,8 @@
   <link href="../css/style.css" rel="stylesheet" />
   <!-- css text reveal-->
   <link href="../css/reveal.css" rel="stylesheet" />
+  <!-- Donation Card CSS -->
+  <link href="./donation-card.css" rel="stylesheet" />
 
   <style>
     /* Keyframes */
@@ -853,6 +855,144 @@
     <!-- Background Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
 
+    <!-- Card Donasi - Amplop Digital -->
+    <div class="relative z-10 container mx-auto px-4 mb-12">
+        <div class="card-container-wrapper">
+            <div class="card-container">
+                <!-- Background decorative elements -->
+                <div class="bg-decoration">
+                    <div class="floating-heart"></div>
+                    <div class="floating-heart"></div>
+                    <div class="floating-heart"></div>
+                </div>
+
+                <!-- Card Cover (Initial State) -->
+                <div class="card-cover" id="cardCover">
+                    <div class="cover-content">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h2 class="cover-title">Turut Bahagia</h2>
+                        <p class="cover-subtitle">Kehadiran Anda adalah hadiah terindah bagi kami</p>
+                        <button class="gift-button" id="giftButton">
+                            <i class="fas fa-heart"></i>
+                            <span>Beri Hadiah</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <p class="optional-text">*opsional</p>
+                    </div>
+                </div>
+
+                <!-- Card Content (Hidden Initially) -->
+                <div class="card-content" id="cardContent">
+                    <div class="content-header">
+                        <button class="close-button" id="closeButton">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="header-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="content-title">Amplop Digital</h3>
+                        <p class="content-subtitle">Terima kasih atas kebaikan hati Anda</p>
+                    </div>
+
+                    <div class="payment-methods">
+                        <!-- Bank Transfer -->
+                        <div class="payment-item">
+                            <div class="payment-header">
+                                <div class="payment-icon bank">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>Transfer Bank</h4>
+                                    <p>BCA - Bank Central Asia</p>
+                                </div>
+                                <button class="copy-btn" data-copy="1234567890">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="account-details">
+                                <div class="account-number">1234567890</div>
+                                <div class="account-name">Nama Pemilik Rekening</div>
+                            </div>
+                        </div>
+
+                        <!-- E-Wallet Options -->
+                        <div class="payment-item">
+                            <div class="payment-header">
+                                <div class="payment-icon gopay">
+                                    <i class="fab fa-google-pay"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>GoPay</h4>
+                                    <p>Scan QR atau transfer</p>
+                                </div>
+                                <button class="copy-btn" data-copy="081234567890">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="account-details">
+                                <div class="account-number">081234567890</div>
+                                <div class="account-name">Nama Pemilik</div>
+                            </div>
+                        </div>
+
+                        <div class="payment-item">
+                            <div class="payment-header">
+                                <div class="payment-icon ovo">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>OVO</h4>
+                                    <p>Transfer ke nomor</p>
+                                </div>
+                                <button class="copy-btn" data-copy="081234567890">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="account-details">
+                                <div class="account-number">081234567890</div>
+                                <div class="account-name">Nama Pemilik</div>
+                            </div>
+                        </div>
+
+                        <div class="payment-item">
+                            <div class="payment-header">
+                                <div class="payment-icon dana">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>DANA</h4>
+                                    <p>Transfer ke nomor</p>
+                                </div>
+                                <button class="copy-btn" data-copy="081234567890">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="account-details">
+                                <div class="account-number">081234567890</div>
+                                <div class="account-name">Nama Pemilik</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thank-you-message">
+                        <i class="fas fa-heart"></i>
+                        <p>Doa dan restu Anda adalah hadiah yang tak ternilai bagi kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Nomor berhasil disalin!</span>
+    </div>
+
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
     <div class="container mx-auto px-4 relative z-10">
       <!-- Section Title -->
       <div class="text-center mb-12">
@@ -1269,6 +1409,8 @@
   <script src="../js/script-percobaan.js"></script>
   <script src="../js/reveal.js" type="module"></script>
   <script src="../js/khoshnus.js" type="module"></script>
+  <!-- Donation Card JavaScript -->
+  <script src="./donation-card.js"></script>
 
   <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
   <script>
