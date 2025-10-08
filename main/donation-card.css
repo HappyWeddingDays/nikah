@@ -517,7 +517,8 @@ body {
 
 overflow-y: scroll; /* tetap bisa digulir secara vertikal */
 
-scrollbar-width: none; /* Firefox */ }
+scrollbar-width: none; /* Firefox */ 
+}
 
 /* Chrome, Edge, Safari */ 
 body::-webkit-scrollbar { 
