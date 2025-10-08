@@ -515,7 +515,7 @@
 /* Custom Scrollbar */
 .card-container {
 
-overflow-y: scroll; /* tetap bisa digulir secara vertikal */
+overflow-y: auto; /* tetap bisa digulir secara vertikal */
 
 scrollbar-width: none; /* Firefox */ 
 }
