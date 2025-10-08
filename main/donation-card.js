@@ -33,12 +33,12 @@ function initializeEventListeners() {
     
     // Copy functionality for all copy buttons
     copyButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const textToCopy = this.getAttribute('data-copy');
-            copyToClipboard(textToCopy);
-        });
+    button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const textToCopy = this.getAttribute('data-copy');
+        copyToClipboard(textToCopy, e); // kirim event ke fungsi
     });
+});
     
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
@@ -133,13 +133,13 @@ function resetPaymentItemsAnimation() {
 }
 
 // Copy to Clipboard Function
-async function copyToClipboard(text) {
+async function copyToClipboard(text, event) {
     try {
         // Modern browsers
         if (navigator.clipboard && window.isSecureContext) {
             await navigator.clipboard.writeText(text);
         } else {
-            // Fallback for older browsers
+            // Fallback
             const textArea = document.createElement('textarea');
             textArea.value = text;
             textArea.style.position = 'fixed';
