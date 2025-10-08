@@ -513,7 +513,7 @@
 }
 
 /* Custom Scrollbar */
-.card-container {
+#rsvp .card-container {
 
 overflow-y: auto; /* tetap bisa digulir secara vertikal */
 
@@ -521,7 +521,7 @@ scrollbar-width: none; /* Firefox */
 }
 
 /* Chrome, Edge, Safari */ 
-.card-container::-webkit-scrollbar { 
+#rsvp .card-container::-webkit-scrollbar { 
     display: none;
   }
     
