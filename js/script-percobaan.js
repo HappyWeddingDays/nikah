@@ -50,22 +50,22 @@ document.addEventListener("DOMContentLoaded", function() {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       countdownElement.innerHTML = `
-                <div class="flex justify-center space-x-4">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold">${days}</div>
-                        <div class="text-sm">Hari</div>
+                <div class=\"flex justify-center space-x-4\">
+                    <div class=\"text-center\">
+                        <div class=\"text-3xl font-bold\">${days}</div>
+                        <div class=\"text-sm\">Hari</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold">${hours}</div>
-                        <div class="text-sm">Jam</div>
+                    <div class=\"text-center\">
+                        <div class=\"text-3xl font-bold\">${hours}</div>
+                        <div class=\"text-sm\">Jam</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold">${minutes}</div>
-                        <div class="text-sm">Menit</div>
+                    <div class=\"text-center\">
+                        <div class=\"text-3xl font-bold\">${minutes}</div>
+                        <div class=\"text-sm\">Menit</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold">${seconds}</div>
-                        <div class="text-sm">Detik</div>
+                    <div class=\"text-center\">
+                        <div class=\"text-3xl font-bold\">${seconds}</div>
+                        <div class=\"text-sm\">Detik</div>
                     </div>
                 </div>
             `;
@@ -112,9 +112,9 @@ document.addEventListener("DOMContentLoaded", function() {
       lightbox.className =
         "fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50";
       lightbox.innerHTML = `
-                <div class="relative max-w-4xl max-h-full p-4">
-                    <img src="${this.src}" alt="${this.alt}" class="max-w-full max-h-full object-contain">
-                    <button class="absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300">&times;</button>
+                <div class=\"relative max-w-4xl max-h-full p-4\">
+                    <img src=\"${this.src}\" alt=\"${this.alt}\" class=\"max-w-full max-h-full object-contain\">
+                    <button class=\"absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300\">&times;</button>
                 </div>
             `;
 
@@ -354,4 +354,28 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = currentScrollY;
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray("section");
+// Hapus bagian hero dari array
+sections = sections.filter(section => section.id !== "hero");
+
+ScrollTrigger.create({
+  snap: {
+    snapTo: "labels", // snap to the closest label in the timeline
+    duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+    delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+    ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+  }
+});
+
+sections.forEach((section) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top top",
+    end: "bottom bottom",
+    label: section.id
+  });
 });

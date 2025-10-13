@@ -1,0 +1,40 @@
+[debug] [2025-10-12T23:38:14.162Z] ----------------------------------------------------------------------
+[debug] [2025-10-12T23:38:14.165Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/i78h9v2gl6qg2w9646hi06syn3hbv4kj-firebase-tools-14.19.1/lib/node_modules/firebase-tools/lib/bin/firebase.js init hosting
+[debug] [2025-10-12T23:38:14.166Z] CLI Version:   14.19.1
+[debug] [2025-10-12T23:38:14.166Z] Platform:      linux
+[debug] [2025-10-12T23:38:14.166Z] Node Version:  v20.19.1
+[debug] [2025-10-12T23:38:14.167Z] Time:          Sun Oct 12 2025 23:38:14 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-10-12T23:38:14.167Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-12T23:38:14.173Z] No OAuth tokens found
+[debug] [2025-10-12T23:38:14.174Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/nikah
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-10-12T23:42:09.369Z] ----------------------------------------------------------------------
+[debug] [2025-10-12T23:42:09.372Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/i78h9v2gl6qg2w9646hi06syn3hbv4kj-firebase-tools-14.19.1/lib/node_modules/firebase-tools/lib/bin/firebase.js login --no-localhost
+[debug] [2025-10-12T23:42:09.373Z] CLI Version:   14.19.1
+[debug] [2025-10-12T23:42:09.373Z] Platform:      linux
+[debug] [2025-10-12T23:42:09.373Z] Node Version:  v20.19.1
+[debug] [2025-10-12T23:42:09.373Z] Time:          Sun Oct 12 2025 23:42:09 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-10-12T23:42:09.373Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-12T23:42:09.379Z] No OAuth tokens found
+[debug] [2025-10-12T23:42:09.380Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
