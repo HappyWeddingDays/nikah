@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Countdown Timer - Menghitung mundur ke tanggal pernikahan
   const countdownElement = document.getElementById("countdown");
-  const weddingDate = new Date("2025-11-11T09:00:00").getTime();
+  const weddingDate = new Date("2025-09-11T09:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
