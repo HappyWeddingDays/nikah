@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Countdown Timer - Menghitung mundur ke tanggal pernikahan
   const countdownElement = document.getElementById("countdown");
-  const weddingDate = new Date("2026-08-23T09:00:00").getTime();
+  const weddingDate = new Date("2025-11-11T09:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -86,11 +86,11 @@ document.addEventListener("DOMContentLoaded", function() {
   if (calendarButton) {
     calendarButton.addEventListener("click", function() {
       const eventDetails = {
-        title: "Pernikahan Anya & Bima",
-        start: "20250823T090000",
-        end: "20250823T140000",
-        description: "Akad Nikah dan Resepsi Pernikahan Anya & Bima",
-        location: "Masjid Agung & Gedung Serba Guna",
+        title: "Pernikahan Sugeng & Shofia",
+        start: "20251111T090000",
+        end: "20251111T140000",
+        description: "Akad Nikah dan Resepsi Pernikahan Sugeng & Shofia",
+        location: "Rumah mempelai wanita",
       };
 
       // Generate Google Calendar URL
