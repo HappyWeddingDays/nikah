@@ -1,19 +1,24 @@
 <!doctype html>
-<html lang="id" class="smooth dark:text-white dark:bg-[#1a1a1a]">
+<html lang="id" class="smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Konfirmasi Kehadiran - Sugeng & Shofia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.11 Nikah - Minimalis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, #ff8c00 0%, #ffd700 50%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // tailwind.config.js
-    module.exports = {
-      darkMode: "class", // atau 'media'
-    };
-  </script>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Sacramento:wght@400&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
@@ -61,7 +66,7 @@
 </head>
 
 <body
-  class="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 overflow-x-hidden relative bg-white text-black dark:bg-[#1a1a1a] dark:text-white">
+  class="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 overflow-x-hidden relative bg-white text-black dark:bg-gray-900 dark:text-white">
   <!-- Background Stars Animation Container -->
   <div class="stars-container fixed inset-0 pointer-events-none z-0">
     <div class="stars absolute inset-0"></div>
@@ -80,11 +85,32 @@
 
   <!-- Main Content Container -->
   <div
-    class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-white/50 dark:bg-black/30 dark:border-white/30">
+    class="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-white/50 dark:bg-black/30">
+    
+    <div class="text-center p-6 max-w-md w-full">
+        <!-- Baris Pertama: Flash Sale dengan ❌ -->
+        <div>
+            <span class="text-4xl font-bold gold-gradient">11.11</span>
+            <div class="flex items-center justify-center mt-1 dark:text-gray-200">
+                <span class="text-xl text-gray-700 font-semibold mr-2">flash sale</span>
+                <span class="text-xl text-red-500">❌</span>
+            </div>
+        </div>
+
+        <!-- Baris Kedua: Nikah dengan ✔️ -->
+        <div>
+            <span class="text-4xl font-bold gold-gradient">11.11</span>
+            <div class="flex items-center justify-center mt-1 dark:text-gray-200">
+                <span class="text-xl text-gray-700 font-semibold mr-2">nikah</span>
+                <span class="text-xl text-green-400">✔️</span>
+            </div>
+        </div>
+    </div>
+    
     <!-- Header Section -->
     <header class="text-center mb-8 animate-fade-in">
       <!-- Heading Tamu Undangan (Font Formal) -->
-      <h3 class="font-playfair text-lg md:text-xl text-gray-700 dark:text-white mb-2 tracking-wide uppercase">
+      <h3 class="font-playfair text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-2 tracking-wide uppercase">
         Tamu Undangan Pernikahan
       </h3>
 
@@ -104,66 +130,66 @@
     <!-- Form Section dengan Background Transparan -->
     <section class="w-full max-w-md mx-auto animate-slide-up">
       <div
-        class="backdrop-blur-md bg-white/20 border border-white/30 rounded-2xl shadow-2xl p-6 md:p-8 bg-white/50 dark:bg-[#1a1a1a] text-black dark:text-white">
+        class="backdrop-blur-md bg-white/20 dark:bg-gray-800/40 border-white/30 dark:border-gray-700/50 rounded-2xl shadow-2xl p-6 md:p-8">
         <!-- Form Title -->
         <h4 class="font-poppins text-xl md:text-2xl font-semibold text-gray-800 dark:text-white text-center mb-6">
           Konfirmasi Kehadiran Anda
         </h4>
 
         <!-- Confirmation Form -->
-        <form id="confirmationForm" class="space-y-6 dark:text-white">
+        <form name="submit-to-google-sheet" id="confirmationForm" class="space-y-6">
           <!-- Nama Field (Wajib) -->
           <div class="space-y-2">
-            <label for="nama" class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+            <label for="nama" class="flex items-center space-x-2 text-sm font-medium text-gray-700 dark:text-gray-300">
               <i class="fas fa-user text-wedding-rose"></i>
-              <span class="dark:text-white">Nama Lengkap *</span>
+              <span>Nama Lengkap *</span>
             </label>
             <input type="text" id="nama" name="nama"
-              class="w-full px-4 py-3 bg-white/50 border border-white/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500"
+              class="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-white/50 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500 dark:placeholder-gray-400 text-gray-800 dark:text-white"
               placeholder="Masukkan nama lengkap Anda" required />
             <span class="error-message text-red-500 text-xs hidden" id="namaError"></span>
           </div>
 
           <!-- Alamat Field (Opsional) -->
           <div class="space-y-2">
-            <label for="alamat" class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+            <label for="alamat" class="flex items-center space-x-2 text-sm font-medium text-gray-700 dark:text-gray-300">
               <i class="fas fa-map-marker-alt text-wedding-rose"></i>
-              <span class="dark:text-white">Alamat (Opsional)</span>
+              <span>Alamat (Opsional)</span>
             </label>
             <textarea id="alamat" name="alamat"
-              class="w-full px-4 py-3 bg-white/50 border border-white/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500 resize-none"
+              class="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-white/50 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose focus:border-transparent transition-all duration-300 placeholder-gray-500 dark:placeholder-gray-400 text-gray-800 dark:text-white resize-none"
               placeholder="Masukkan alamat Anda (opsional)" rows="3"></textarea>
           </div>
 
           <!-- Kehadiran Options -->
           <div class="space-y-3">
-            <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
+            <label class="flex items-center space-x-2 text-sm font-medium text-gray-700 dark:text-gray-300">
               <i class="fas fa-calendar-check text-wedding-rose"></i>
-              <span class="dark:text-white">Konfirmasi Kehadiran *</span>
+              <span>Konfirmasi Kehadiran *</span>
             </label>
             <div class="space-y-3">
               <!-- Option: Hadir -->
               <label
-                class="flex items-center space-x-3 p-3 bg-white/30 rounded-lg cursor-pointer hover:bg-white/40 transition-all duration-300 group">
+                class="flex items-center space-x-3 p-3 bg-white/30 dark:bg-gray-700/50 rounded-lg cursor-pointer hover:bg-white/40 dark:hover:bg-gray-700 transition-all duration-300 group">
                 <input type="radio" name="kehadiran" value="hadir" class="sr-only" required />
                 <div
                   class="radio-custom w-5 h-5 border-2 border-wedding-rose rounded-full flex items-center justify-center group-hover:border-wedding-rose/80">
                   <div class="w-2.5 h-2.5 bg-wedding-rose rounded-full opacity-0 transition-opacity duration-200"></div>
                 </div>
                 <i class="fas fa-check-circle text-green-500 text-lg"></i>
-                <span class="text-gray-700 font-medium dark:text-white">Ya, saya akan hadir</span>
+                <span class="text-gray-700 dark:text-gray-200 font-medium">Ya, saya akan hadir</span>
               </label>
 
               <!-- Option: Tidak Hadir -->
               <label
-                class="flex items-center space-x-3 p-3 bg-white/30 rounded-lg cursor-pointer hover:bg-white/40 transition-all duration-300 group">
+                class="flex items-center space-x-3 p-3 bg-white/30 dark:bg-gray-700/50 rounded-lg cursor-pointer hover:bg-white/40 dark:hover:bg-gray-700 transition-all duration-300 group">
                 <input type="radio" name="kehadiran" value="tidak-hadir" class="sr-only" required />
                 <div
                   class="radio-custom w-5 h-5 border-2 border-wedding-rose rounded-full flex items-center justify-center group-hover:border-wedding-rose/80">
                   <div class="w-2.5 h-2.5 bg-wedding-rose rounded-full opacity-0 transition-opacity duration-200"></div>
                 </div>
                 <i class="fas fa-times-circle text-red-500 text-lg"></i>
-                <span class="text-gray-700 font-medium dark:text-white">Maaf, saya tidak dapat hadir</span>
+                <span class="text-gray-700 dark:text-gray-200 font-medium">Maaf, saya tidak dapat hadir</span>
               </label>
             </div>
           </div>
@@ -183,18 +209,18 @@
         </form>
 
         <!-- Success Message -->
-        <div class="dark:bg-[#1a1a1a] dark:text-white success-message hidden text-center space-y-4 py-8" id="successMessage">
+        <div class="success-message hidden text-center space-y-4 py-8" id="successMessage">
           <div class="text-green-500 text-5xl mb-4">
             <i class="fas fa-check-circle"></i>
           </div>
-          <h4 class="dark:text-white font-poppins text-2xl font-semibold text-gray-800">
+          <h4 class="font-poppins text-2xl font-semibold text-gray-800 dark:text-white">
             Terima Kasih!
           </h4>
-          <p class="dark:text-white text-gray-600 mb-6">
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
             Konfirmasi kehadiran Anda telah berhasil dikirim.
           </p>
           <button id="backBtn"
-            class="dark:text-white bg-gradient-to-r from-wedding-sage to-green-500 hover:from-wedding-sage/90 hover:to-green-500/90 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2 mx-auto">
+            class="bg-gradient-to-r from-wedding-sage to-green-500 hover:from-wedding-sage/90 hover:to-green-500/90 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2 mx-auto">
             <i class="fas fa-arrow-left"></i>
             <span>Lihat Detail Undangan</span>
           </button>
@@ -203,18 +229,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="dark:text-white text-center mt-8 animate-fade-in">
-      <p class="font-poppins text-gray-600 flex items-center justify-center space-x-2">
+    <footer class="text-center mt-8 animate-fade-in">
+      <p class="font-poppins text-gray-600 dark:text-gray-200 flex items-center justify-center space-x-2">
         <i class="fas fa-heart text-wedding-rose animate-twinkle"></i>
-        <span class="dark:text-gray-300">Dengan cinta, Sugeng & Shofia</span>
+        <span>Dengan cinta, Sugeng & Shofia</span>
         <i class="fas fa-heart text-wedding-rose animate-twinkle"></i>
       </p>
     </footer>
   </div>
 
   <!-- Custom JavaScript -->
-  <script src="js/script-manus.js"></script>
-  <script src="js/form-handler.js"></script>
+  <script src="script.js"></script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
   <script>
@@ -222,8 +247,9 @@
       const toggle = document.getElementById("darkModeToggle");
       const html = document.documentElement;
 
-      // Set dark mode awal (jika tersimpan)
-      if (localStorage.getItem("mode") === "dark") {
+      // Set initial dark mode based on localStorage
+      if (localStorage.getItem("mode") === "dark" || 
+         (!("mode" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
         html.classList.add("dark");
       }
 
@@ -235,7 +261,6 @@
     });
   </script>
   <script src="/js/reveal.jsx" type="module"></script>
-  <script src="/js/script.jsx" type="module"></script>
 </body>
 
 </html>
