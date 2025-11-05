@@ -130,75 +130,130 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // ===== AUDIO CONTROL =====
+const playlist = [
+    {
+        title: "Lagu 1 - You Are The Reason",
+        src: "../audio/youAreTheReason.mp3",
+    },
+    {
+        title: "Lagu 2 - No one noticed",
+        src: "../audio/noOneNoticed.mp3",
+    },
+    {
+        title: "Lagu 3 - somewhere only we bow",
+        src: "../audio/somewhereOnlyWeBow.mp3",
+    },
+    {
+        title: "Lagu 4 - The Wedding",
+        src: "../audio/weddingNasheed.mp3",
+    }
+];
 
-  // Audio Background Control
-  const audioControl = document.getElementById("audio-control");
-  const playIcon = document.getElementById("play-icon");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
-  const pauseIcon = document.getElementById("pause-icon");
-  const backgroundAudio = document.getElementById("background-audio");
-	let isPlaying = false;
+// Inisialisasi variabel
+let currentTrackIndex = 0;
+const audioElement = document.getElementById('background-audio');
+const playIcon = document.getElementById('play-icon');
+const pauseIcon = document.getElementById('pause-icon');
+const audioControl = document.getElementById('audio-control');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const audioInfo = document.getElementById('audio-info');
 
-  // Daftar lagu
-  const playlist = [
-    "../audio/weddingNasheed.mp3",
-    "../audio/noOneNoticed.mp3",
-    "../audio/somewhereOnlyWeBow.mp3",
-    "../audio/youAreTheReason.mp3"
-  ];
-  let currentTrack = 0;
+// Fungsi untuk memuat dan memutar lagu - DIPERBAIKI
+function loadTrack(index, autoplay = false) { // Tambahkan parameter autoplay
+    // Validasi index
+    if (index < 0) index = playlist.length - 1;
+    if (index >= playlist.length) index = 0;
 
-  // Set volume awal
-  backgroundAudio.volume = 0.3;
+    currentTrackIndex = index;
 
-  // Fungsi untuk memutar lagu
-function playTrack(index) {
-  if (index < 0 || index >= playlist.length) {
-    console.warn('Index out of range:', index);
-    return;
-  }
-  currentTrack = index;
-  audio.src = playlist[currentTrack];
-  console.log('▶️ Playing:', audio.src);
-  audio.play().catch(e => console.error('Gagal play:', e));
+    // Set sumber audio
+    audioElement.src = playlist[currentTrackIndex].src;
+
+    // Update informasi lagu
+    audioInfo.textContent = `Sedang memutar: ${playlist[currentTrackIndex].title}`;
+    audioInfo.classList.remove('hidden');
+
+    // Load metadata sebelum memutar
+    audioElement.load();
+    
+    // Jika autoplay true, langsung play - DIPERBAIKI
+    if (autoplay) {
+        audioElement.play().then(() => {
+            playIcon.classList.add('hidden');
+            pauseIcon.classList.remove('hidden');
+        }).catch(error => {
+            console.error("Error playing audio:", error);
+            // Jika autoplay gagal, tetap update UI ke state pause
+            playIcon.classList.remove('hidden');
+            pauseIcon.classList.add('hidden');
+        });
+    } else {
+        // Reset UI ke state pause jika tidak autoplay
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+    }
 }
 
-// Tombol Next
-document.getElementById('next-btn').addEventListener('click', () => {
-  console.log('Next button clicked');
-  currentTrack = (currentTrack + 1) % playlist.length;
-  playTrack(currentTrack);
+// Fungsi untuk toggle play/pause
+function togglePlayPause() {
+    if (audioElement.paused) {
+        audioElement.play().then(() => {
+            playIcon.classList.add('hidden');
+            pauseIcon.classList.remove('hidden');
+        }).catch(error => {
+            console.error("Error playing audio:", error);
+        });
+    } else {
+        audioElement.pause();
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+    }
+}
+
+// Fungsi untuk memutar lagu sebelumnya - DIPERBAIKI
+function playPrevious() {
+    loadTrack(currentTrackIndex - 1, true); // true = autoplay
+}
+
+// Fungsi untuk memutar lagu berikutnya - DIPERBAIKI
+function playNext() {
+    loadTrack(currentTrackIndex + 1, true); // true = autoplay
+}
+
+// Event listeners
+audioControl.addEventListener('click', togglePlayPause);
+prevBtn.addEventListener('click', playPrevious);
+nextBtn.addEventListener('click', playNext);
+
+// Event ketika audio selesai diputar
+audioElement.addEventListener('ended', playNext);
+
+// Event untuk menangani error pemutaran audio
+audioElement.addEventListener('error', function() {
+    console.error("Error loading audio file");
+    audioInfo.textContent = "Error memuat audio";
 });
 
-// Tombol Prev
-document.getElementById('prev-btn').addEventListener('click', () => {
-  console.log('Prev button clicked');
-  currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
-  playTrack(currentTrack);
+// Event ketika audio dimulai
+audioElement.addEventListener('play', function() {
+    playIcon.classList.add('hidden');
+    pauseIcon.classList.remove('hidden');
 });
-  // Saat lagu selesai, lanjut otomatis
-  backgroundAudio.addEventListener("ended", function() {
-    playTrack(currentTrack + 1);
-  });
 
-  // Sinkronkan ikon saat play/pause
-  backgroundAudio.addEventListener("play", function() {
-    playIcon.classList.add("hidden");
-    pauseIcon.classList.remove("hidden");
-    isPlaying = true;
-  });
+// Event ketika audio dijeda
+audioElement.addEventListener('pause', function() {
+    playIcon.classList.remove('hidden');
+    pauseIcon.classList.add('hidden');
+});
 
-  backgroundAudio.addEventListener("pause", function() {
-    playIcon.classList.remove("hidden");
-    pauseIcon.classList.add("hidden");
-    isPlaying = false;
-  });
+// Memuat lagu pertama saat halaman dimuat - DIPERBAIKI
+window.addEventListener('DOMContentLoaded', function() {
+    loadTrack(1, true); // false = tidak autoplay saat pertama kali
+});
 
-  // Coba autoplay (akan gagal jika diblokir browser)
-  backgroundAudio.play().catch(() => {
-    console.log("Autoplay prevented by browser");
-  });
+// Set volume (opsional)
+audioElement.volume = 0.5; // Volume 50%
   /* let isPlaying = false;
 
   // Set volume
