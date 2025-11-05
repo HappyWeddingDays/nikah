@@ -1258,34 +1258,49 @@
       </div>
     </div>
 
-    <!-- Audio Control - Fixed Position -->
-    <div id="audio-control"
-      class="fixed bottom-6 right-6 w-14 h-14 bg-clr-primary text-white rounded-full shadow-lg cursor-pointer flex items-center justify-center hover:bg-opacity-90 transition-all duration-200 z-40"
-      data-aos="zoom-in" data-aos-delay="1200">
-      <!-- Play Icon (default) -->
-      <svg id="play-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd"
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-          clip-rule="evenodd"></path>
-      </svg>
-      <!-- Pause Icon (hidden by default) -->
-      <svg id="pause-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd"
-          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z"
-          clip-rule="evenodd"></path>
-      </svg>
-    </div>
+<!-- Audio Control - Fixed Position -->
+<div class="fixed bottom-6 right-6 flex items-center gap-3 z-40">
 
-    <!-- Audio Element (Hidden) -->
-    <!-- Ganti src dengan path file audio yang sebenarnya -->
-    <audio id="background-audio" loop preload="auto">
-      <source src="../audio/weddingNasheed.mp3" type="audio/mpeg">
-      <source src="/audio/background-music.ogg" type="audio/ogg">
-      <!-- Fallback message -->
-      Your browser does not support the audio element.
-    </audio>
+  <!-- Tombol Previous -->
+  <button id="prev-btn"
+    class="w-10 h-10 bg-clr-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-all duration-200">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M9 10l8-6v12l-8-6zm-3 6V4H4v12h2z" />
+    </svg>
+  </button>
 
+  <!-- Tombol Play / Pause -->
+  <button id="audio-control"
+    class="w-14 h-14 bg-clr-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-all duration-200">
+    <!-- Play Icon -->
+    <svg id="play-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm5.555-8.832L8 12.834V7.166l7.555 2.002z"
+        clip-rule="evenodd" />
+    </svg>
+    <!-- Pause Icon -->
+    <svg id="pause-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7h2v6H8V7zm4 0h2v6h-2V7z"
+        clip-rule="evenodd" />
+    </svg>
+  </button>
+
+  <!-- Tombol Next -->
+  <button id="next-btn"
+    class="w-10 h-10 bg-clr-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-all duration-200">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M11 10l-8 6V4l8 6zm3-6v12h2V4h-2z" />
+    </svg>
+  </button>
+</div>
+
+<!-- Audio Element -->
+<audio id="background-audio" preload="auto">
+  <source src="../audio/youAreTheReason.mp3" type="audio/mpeg">
+  <source src="../audio/background-music.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
   </footer>
 
 
@@ -1431,7 +1446,23 @@
         el.style.outline = "2px solid red";
       }
     });
-  </script> -->
-</body>
+  </script> --><!-- Debug Console (Eruda) -->
+<script>
+  (function () {
+    // Aktifkan hanya jika diakses dari perangkat mobile atau localhost
+    var isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    var isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 
+    if (isMobile || isLocal) {
+      var script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/npm/eruda";
+      script.onload = function () {
+        eruda.init();
+        console.log("%c🧩 Eruda Debug Console Aktif!", "color: lime; font-weight: bold;");
+      };
+      document.body.appendChild(script);
+    }
+  })();
+</script>
+</body>
 </html>

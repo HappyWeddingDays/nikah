@@ -134,12 +134,75 @@ document.addEventListener("DOMContentLoaded", function() {
   // Audio Background Control
   const audioControl = document.getElementById("audio-control");
   const playIcon = document.getElementById("play-icon");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
   const pauseIcon = document.getElementById("pause-icon");
   const backgroundAudio = document.getElementById("background-audio");
-  let isPlaying = false;
+	let isPlaying = false;
+
+  // Daftar lagu
+  const playlist = [
+    "../audio/weddingNasheed.mp3",
+    "../audio/noOneNoticed.mp3",
+    "../audio/somewhereOnlyWeBow.mp3",
+    "../audio/youAreTheReason.mp3"
+  ];
+  let currentTrack = 0;
+
+  // Set volume awal
+  backgroundAudio.volume = 0.3;
+
+  // Fungsi untuk memutar lagu
+function playTrack(index) {
+  if (index < 0 || index >= playlist.length) {
+    console.warn('Index out of range:', index);
+    return;
+  }
+  currentTrack = index;
+  audio.src = playlist[currentTrack];
+  console.log('▶️ Playing:', audio.src);
+  audio.play().catch(e => console.error('Gagal play:', e));
+}
+
+// Tombol Next
+document.getElementById('next-btn').addEventListener('click', () => {
+  console.log('Next button clicked');
+  currentTrack = (currentTrack + 1) % playlist.length;
+  playTrack(currentTrack);
+});
+
+// Tombol Prev
+document.getElementById('prev-btn').addEventListener('click', () => {
+  console.log('Prev button clicked');
+  currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+  playTrack(currentTrack);
+});
+  // Saat lagu selesai, lanjut otomatis
+  backgroundAudio.addEventListener("ended", function() {
+    playTrack(currentTrack + 1);
+  });
+
+  // Sinkronkan ikon saat play/pause
+  backgroundAudio.addEventListener("play", function() {
+    playIcon.classList.add("hidden");
+    pauseIcon.classList.remove("hidden");
+    isPlaying = true;
+  });
+
+  backgroundAudio.addEventListener("pause", function() {
+    playIcon.classList.remove("hidden");
+    pauseIcon.classList.add("hidden");
+    isPlaying = false;
+  });
+
+  // Coba autoplay (akan gagal jika diblokir browser)
+  backgroundAudio.play().catch(() => {
+    console.log("Autoplay prevented by browser");
+  });
+  /* let isPlaying = false;
 
   // Set volume
-  backgroundAudio.volume = 0.3; // Volume 30%
+  backgroundAudio.volume = 0.5; // Volume 50%
 
   // Audio control click handler
   audioControl.addEventListener("click", function() {
@@ -190,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("Autoplay prevented by browser");
       isPlaying = false;
     });
-
+*/
   // ===== FORM SUBMISSION =====
 
   // RSVP Form Handler
