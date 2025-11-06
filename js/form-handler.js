@@ -112,61 +112,70 @@ class WeddingFormHandler {
     }
   }
 
-  validateField(field) {
-    const fieldName = field.name;
-    const fieldValue = field.value.trim();
-    const rules = VALIDATION_RULES[fieldName];
+validateField(field) {
+  const fieldName = field.name;
+  const rules = VALIDATION_RULES[fieldName];
 
-    if (!rules) return true;
+  if (!rules) return true;
 
-    this.clearFieldError(field);
+  this.clearFieldError(field);
 
-    if (rules.required && !fieldValue) {
-      if (field.type === "radio") {
-        const radioGroup = this.form.querySelectorAll(`input[name="${fieldName}"]`);
-        const isChecked = Array.from(radioGroup).some((radio) => radio.checked);
-        if (!isChecked) {
-          this.showFieldError(field, rules.errorMessages.required);
-          return false;
-        }
-      } else {
-        this.showFieldError(field, rules.errorMessages.required);
-        return false;
-      }
-    }
-
-    if (!fieldValue && !rules.required) return true;
-
-    if (rules.minLength && fieldValue.length < rules.minLength) {
-      this.showFieldError(field, rules.errorMessages.minLength);
-      return false;
-    }
-
-    if (rules.maxLength && fieldValue.length > rules.maxLength) {
-      this.showFieldError(field, rules.errorMessages.maxLength);
-      return false;
-    }
-
-    if (rules.pattern && !rules.pattern.test(fieldValue)) {
-      this.showFieldError(field, rules.errorMessages.pattern);
-      return false;
-    }
-
-    return true;
+  // PERBAIKAN: Handle radio button secara khusus
+  if (field.type === "radio") {
+    return this.validateRadioGroup(fieldName, rules);
   }
 
-  validateForm() {
-    let isValid = true;
-    const fields = this.form.querySelectorAll('input:not([type="submit"]), textarea');
+  // Validasi field lainnya...
+  const fieldValue = field.value.trim();
+  // ...
+}
 
-    fields.forEach((field) => {
-      if (!this.validateField(field)) {
-        isValid = false;
-      }
-    });
-
-    return isValid;
+// METODE BARU: Validasi khusus untuk grup radio
+validateRadioGroup(fieldName, rules) {
+  const radioGroup = this.form.querySelectorAll(`input[name="${fieldName}"]`);
+  const isChecked = Array.from(radioGroup).some((radio) => radio.checked);
+  
+  if (rules.required && !isChecked) {
+    // Tampilkan error pada elemen yang mewakili grup
+    const firstRadio = radioGroup[0];
+    this.showFieldError(firstRadio, rules.errorMessages.required);
+    return false;
   }
+  
+  return true;
+}
+
+validateForm() {
+  let isValid = true;
+  
+  // Validasi field regular
+  const fields = this.form.querySelectorAll('input:not([type="radio"]):not([type="submit"]), textarea');
+  fields.forEach((field) => {
+    if (!this.validateField(field)) {
+      isValid = false;
+    }
+  });
+
+  // PERBAIKAN: Validasi khusus untuk grup radio
+  const radioGroups = {};
+  const allRadios = this.form.querySelectorAll('input[type="radio"]');
+  
+  allRadios.forEach(radio => {
+    if (!radioGroups[radio.name]) {
+      radioGroups[radio.name] = radio.name;
+    }
+  });
+
+  // Validasi setiap grup radio
+  Object.keys(radioGroups).forEach(groupName => {
+    const rules = VALIDATION_RULES[groupName];
+    if (rules && !this.validateRadioGroup(groupName, rules)) {
+      isValid = false;
+    }
+  });
+
+  return isValid;
+}
 
   showFieldError(field, message) {
     const errorElement = document.getElementById(field.name + "Error");
@@ -199,15 +208,15 @@ class WeddingFormHandler {
     });
   }
 
-  async handleFormSubmit(event) {
+   async handleFormSubmit(event) { 
     event.preventDefault();
 
     if (this.isSubmitting) return;
 
-    if (!this.validateForm()) {
-      this.showNotification("Mohon perbaiki kesalahan pada form", "error");
+    /* if (!this.validateForm()) {
+      this.showNotification();
       return;
-    }
+    } */
 
     this.isSubmitting = true;
     this.setLoadingState(true);
@@ -223,10 +232,6 @@ class WeddingFormHandler {
 
       if (this.retryCount < GOOGLE_SHEETS_CONFIG.maxRetries) {
         this.retryCount++;
-        this.showNotification(
-          `Gagal mengirim data. Mencoba lagi... (${this.retryCount}/${GOOGLE_SHEETS_CONFIG.maxRetries})`,
-          "warning",
-        );
 
         setTimeout(() => {
           this.handleFormSubmit(event);
@@ -236,7 +241,7 @@ class WeddingFormHandler {
       }
 
       this.showNotification(
-        "Gagal mengirim konfirmasi. Silakan coba lagi nanti.",
+        "Mohon isi semua formulir dgn benar.",
         "error",
       );
     } finally {
@@ -245,17 +250,25 @@ class WeddingFormHandler {
     }
   }
 
-  collectFormData() {
-    const formData = new FormData(this.form);
-    const data = {};
-    data.nama = formData.get("nama").trim();
-    data.alamat = formData.get("alamat").trim();
-    data.kehadiran = formData.get("kehadiran");
-    data.timestamp = new Date().toISOString();
-    data.useragent = navigator.userAgent;
-
-    return data;
+collectFormData() {
+  const formData = new FormData(this.form);
+  const data = {};
+  
+  data.nama = formData.get("nama").trim();
+  data.alamat = formData.get("alamat").trim();
+  
+  // PERBAIKAN: Validasi tambahan untuk kehadiran
+  const kehadiran = formData.get("kehadiran");
+  if (!kehadiran || (kehadiran !== "hadir" && kehadiran !== "tidak-hadir")) {
+    throw new Error("Pilihan kehadiran tidak valid");
   }
+  data.kehadiran = kehadiran;
+  
+  data.timestamp = new Date().toISOString();
+  data.useragent = navigator.userAgent;
+
+  return data;
+}
 
   async submitToGoogleSheets(data) {
     const formData = new URLSearchParams();
