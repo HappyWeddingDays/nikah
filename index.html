@@ -9,11 +9,22 @@
   <!-- Tailwind CSS -->
   <style>
     .gold-gradient {
-    background: linear-gradient(135deg, #ff8c00 0%, #ffd700 50%, #ffa500 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+      background: linear-gradient(135deg, #ff8c00 0%, #ffd700 50%, #ffa500 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Custom styles untuk radio button validation */
+    .radio-group-error .radio-option {
+      border-color: #ef4444 !important;
+    }
+    .radio-error-message {
+      display: none;
+      color: #ef4444;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -108,7 +119,7 @@
        </div>
    </div>
     </div>
-    
+
     <!-- Header Section -->
     <header class="text-center mb-8 animate-fade-in">
       <!-- Heading Tamu Undangan (Font Formal) -->
@@ -163,8 +174,8 @@
               placeholder="Masukkan alamat Anda (opsional)" rows="3"></textarea>
           </div>
 
-          <!-- Kehadiran Options -->
-          <div class="space-y-3">
+          <!-- PERBAIKAN: Kehadiran Options dengan validasi yang lebih kuat -->
+          <div class="space-y-3" id="kehadiranGroup">
             <label class="flex items-center space-x-2 text-sm font-medium text-gray-700">
               <i class="fas fa-calendar-check text-wedding-rose"></i>
               <span class="dark:text-white">Konfirmasi Kehadiran *</span>
@@ -172,8 +183,9 @@
             <div class="space-y-3">
               <!-- Option: Hadir -->
               <label
-                class="flex items-center space-x-3 p-3 bg-white/30 rounded-lg cursor-pointer hover:bg-white/40 transition-all duration-300 group">
-                <input type="radio" name="kehadiran" value="hadir" class="sr-only" required />
+                class="radio-option flex items-center space-x-3 p-3 bg-white/30 rounded-lg cursor-pointer hover:bg-white/40 transition-all duration-300 group border border-transparent"
+                data-value="hadir">
+                <input type="radio" name="kehadiran" value="hadir" class="sr-only" />
                 <div
                   class="radio-custom w-5 h-5 border-2 border-wedding-rose rounded-full flex items-center justify-center group-hover:border-wedding-rose/80">
                   <div class="w-2.5 h-2.5 bg-wedding-rose rounded-full opacity-0 transition-opacity duration-200"></div>
@@ -184,8 +196,9 @@
 
               <!-- Option: Tidak Hadir -->
               <label
-                class="flex items-center space-x-3 p-3 bg-white/30 rounded-lg cursor-pointer hover:bg-white/40 transition-all duration-300 group">
-                <input type="radio" name="kehadiran" value="tidak-hadir" class="sr-only" required />
+                class="radio-option flex items-center space-x-3 p-3 bg-white/30 rounded-lg cursor-pointer hover:bg-white/40 transition-all duration-300 group border border-transparent"
+                data-value="tidak-hadir">
+                <input type="radio" name="kehadiran" value="tidak-hadir" class="sr-only" />
                 <div
                   class="radio-custom w-5 h-5 border-2 border-wedding-rose rounded-full flex items-center justify-center group-hover:border-wedding-rose/80">
                   <div class="w-2.5 h-2.5 bg-wedding-rose rounded-full opacity-0 transition-opacity duration-200"></div>
@@ -194,6 +207,12 @@
                 <span class="text-gray-700 font-medium dark:text-white">Maaf, saya tidak dapat hadir</span>
               </label>
             </div>
+            <!-- Error message untuk kehadiran -->
+            <div class="radio-error-message text-red-500 text-xs" id="kehadiranError">
+              Silakan pilih konfirmasi kehadiran Anda
+            </div>
+            <!-- Input hidden untuk menyimpan nilai kehadiran -->
+            <input type="hidden" id="kehadiranValue" name="kehadiran" required />
           </div>
 
           <!-- Submit Button -->
@@ -241,6 +260,105 @@
   </div>
 
   <!-- Custom JavaScript -->
+  <script>
+    // JavaScript untuk menangani radio button custom dan validasi
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('confirmationForm');
+      const radioOptions = document.querySelectorAll('.radio-option');
+      const kehadiranValue = document.getElementById('kehadiranValue');
+      const kehadiranGroup = document.getElementById('kehadiranGroup');
+      const kehadiranError = document.getElementById('kehadiranError');
+      
+      // Handle radio option selection
+      radioOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          // Remove selected class from all options
+          radioOptions.forEach(opt => {
+            opt.classList.remove('selected', 'border-wedding-rose');
+            const radioInput = opt.querySelector('input[type="radio"]');
+            const innerCircle = opt.querySelector('.w-2\\.5');
+            
+            if (innerCircle) {
+              innerCircle.style.opacity = "0";
+            }
+          });
+          
+          // Add selected class to clicked option
+          this.classList.add('selected', 'border-wedding-rose');
+          const value = this.getAttribute('data-value');
+          const radioInput = this.querySelector('input[type="radio"]');
+          const innerCircle = this.querySelector('.w-2\\.5');
+          
+          // Set the value to hidden input
+          kehadiranValue.value = value;
+          radioInput.checked = true;
+          
+          if (innerCircle) {
+            innerCircle.style.opacity = "1";
+          }
+          
+          // Clear error state
+          kehadiranGroup.classList.remove('radio-group-error');
+          kehadiranError.style.display = 'none';
+        });
+      });
+      
+      // Form validation
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Reset errors
+        document.querySelectorAll('.error-message').forEach(el => {
+          el.classList.add('hidden');
+        });
+        kehadiranGroup.classList.remove('radio-group-error');
+        kehadiranError.style.display = 'none';
+        
+        let isValid = true;
+        
+        // Validate name
+        const nama = document.getElementById('nama').value.trim();
+        if (!nama) {
+          document.getElementById('namaError').textContent = 'Nama lengkap wajib diisi';
+          document.getElementById('namaError').classList.remove('hidden');
+          isValid = false;
+        }
+        
+        // Validate kehadiran
+        if (!kehadiranValue.value) {
+          kehadiranGroup.classList.add('radio-group-error');
+          kehadiranError.style.display = 'block';
+          isValid = false;
+        }
+        
+        if (isValid) {
+          // Show loading state
+          const submitBtn = document.getElementById('submitBtn');
+          const btnText = submitBtn.querySelector('.btn-text');
+          const btnLoading = submitBtn.querySelector('.btn-loading');
+          
+          submitBtn.disabled = true;
+          btnText.style.display = 'none';
+          btnLoading.classList.remove('hidden');
+          
+          // Simulate form submission (gantikan dengan kode form-handler.js Anda)
+          setTimeout(() => {
+            // Show success message
+            form.style.display = 'none';
+            document.getElementById('successMessage').classList.remove('hidden');
+          }, 1500);
+        }
+      });
+      
+      // Real-time validation for name field
+      document.getElementById('nama').addEventListener('input', function() {
+        if (this.value.trim()) {
+          document.getElementById('namaError').classList.add('hidden');
+        }
+      });
+    });
+  </script>
+  
   <script src="js/script-manus.js"></script>
   <script src="js/form-handler.js"></script>
   <script src="js/main.js"></script>
@@ -265,5 +383,4 @@
   <script src="/js/reveal.jsx" type="module"></script>
   <script src="/js/script.jsx" type="module"></script>
 </body>
-
-                  </html>
+</html>
